@@ -1,0 +1,513 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+MERGED from [com.android.support:design:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\fa0ea58ce5947cb821484741702ebd48\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\16fcc0ace06257c0aa39570cf9e9fe4d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-2\files-2.1\daba047956f00f40b5b9236b5459849a\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.volley:dc-volley:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\90560fcb767d95d9ea6f00257d0d4efe\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a2e50a14a245af6d4c7768d3b3c6b13a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2c61507bf6dd09ec9acec4fb938070f6\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:17:1-93:12
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:2:1-28:12
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:17:1-30:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\3ef606c3eff724c5f0d94302884e632b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\27d0ba6bc2167650c1dc70a365d1bf22\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2d2e5f7b0974acd9d08b683eaf2384b0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\6071687bee2fcb34e7f814d78711845d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ad6501c6601f6566bea4bdc6b19803d7\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\9bb8a9b81a0b6c2f8df906ecf0da0ec1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\176a3ce1e471fe5d1672ee0afea8a866\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5f483826ca90f13fb78af6f4b4af3990\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\4a1834c6993b977e9c35829a7718c727\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2aeeb957862668bb000cc12f0e9cdef2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5818575436cb0317a4ff20d9da54eb5b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\807d5a426537987627b67506bee7207e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\580d4eb8fdd258c45cf0e6a91f4a9ac6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\31a5f8fa2e342341e5ee95316a44d754\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\d74f3ae3b19c7f93ca6b6319a128f8b6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\02582f336a168aee8e7e154dba1af0e4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5954eb846a8df1866dfe4e49182aa2ef\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f75a9e8c8a1e3c841e429f17090a5b8f\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\bbeccc5f610fb2704cf556e026873fc1\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\dd1177a7ff33a74460765ae5a43d6f12\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e329b4705a533f70dcd28f709feac269\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\77183b6ac6264a63ca2f3bb84072e657\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\01d43666bc7824ae183f2ffea58e9d9a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\26bbc4753ded697f24cb5d7ba8aeb02f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\cf703df275ac6e226c76780a62517713\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\301b1a1e36cb2ea39d9cf1b2febbbb3b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c42d4d13b351dfedb476934204f8a8c5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db-framework:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\8a7f5a3024583a5fd64303bdbf797445\AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.persistence:db:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f0aa43da3678bb740f98a5d33edf880b\AndroidManifest.xml:17:1-24:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\d3a7faa40900b9147cc6d66d2ee6f78f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\434f26b9a208baca92385694304dc9f0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e1efca8645e8e7030b168998b33693fe\AndroidManifest.xml:17:1-22:12
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:2:1-28:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+	package
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-62:12
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:10:5-67
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.CAMERA
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:8:5-65
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:11:5-65
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:8:22-62
+uses-permission#android.permission.VIBRATE
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:9:5-66
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:12:5-66
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:9:22-63
+uses-feature#android.hardware.camera
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:11:5-13:36
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:14:5-16:36
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:14:5-16:36
+	android:required
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:13:9-33
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:12:9-47
+uses-feature#android.hardware.camera.autofocus
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:14:5-16:36
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:17:5-19:36
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:17:5-19:36
+	android:required
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:16:9-33
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:15:9-57
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:18:5-79
+MERGED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:23:5-79
+MERGED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:23:5-79
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:9:5-79
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:18:22-76
+application
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:21:5-60:19
+MERGED from [com.android.support:design:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\fa0ea58ce5947cb821484741702ebd48\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\fa0ea58ce5947cb821484741702ebd48\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-2\files-2.1\daba047956f00f40b5b9236b5459849a\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-2\files-2.1\daba047956f00f40b5b9236b5459849a\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:dc-volley:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\90560fcb767d95d9ea6f00257d0d4efe\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:dc-volley:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\90560fcb767d95d9ea6f00257d0d4efe\AndroidManifest.xml:9:5-20
+MERGED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:26:5-91:19
+MERGED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:26:5-91:19
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:12:5-26:19
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:12:5-26:19
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:22:5-28:19
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:22:5-28:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f75a9e8c8a1e3c841e429f17090a5b8f\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f75a9e8c8a1e3c841e429f17090a5b8f\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\bbeccc5f610fb2704cf556e026873fc1\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\bbeccc5f610fb2704cf556e026873fc1\AndroidManifest.xml:22:5-23:19
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:21:5-26:19
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:21:5-26:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f75a9e8c8a1e3c841e429f17090a5b8f\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:26:9-35
+	android:label
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:24:9-41
+	android:roundIcon
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:25:9-54
+	android:icon
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:23:9-43
+	android:allowBackup
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:22:9-35
+	android:theme
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:27:9-52
+activity#com.apiit.shoppingcart.PaypalConfirmationActivity
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:28:9-73
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:28:19-61
+activity#com.apiit.shoppingcart.PayPalPaymentActivity
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:29:9-59
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:29:19-56
+activity#com.apiit.shoppingcart.SummaryActivity
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:30:9-53
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:30:19-50
+activity#com.apiit.shoppingcart.ItemDetails
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:31:9-49
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:31:19-46
+activity#com.apiit.shoppingcart.MainActivity
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:32:9-50
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:32:19-47
+activity#com.apiit.shoppingcart.Product_Details
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:33:9-53
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:33:19-50
+activity#com.apiit.shoppingcart.CartActivity
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:34:9-50
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:34:19-47
+activity#com.apiit.shoppingcart.Register
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:35:9-46
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:35:19-43
+activity#com.apiit.shoppingcart.CategoryActivity
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:36:9-54
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:36:19-51
+activity#com.apiit.shoppingcart.Order
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:41:9-43
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:41:19-40
+activity#com.apiit.shoppingcart.LoginActivity
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:42:9-47:20
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:42:19-48
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:43:13-46:29
+action#android.intent.action.MAIN
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:44:17-69
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:44:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:45:17-77
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:45:27-74
+provider#com.apiit.shoppingcart.database.OrderProvider
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:49:9-52:39
+	android:authorities
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:51:13-57
+	android:exported
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:52:13-36
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:50:13-51
+meta-data#preloaded_fonts
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:54:9-56:57
+	android:resource
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:56:13-54
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:55:13-43
+meta-data#com.google.android.geo.API_KEY
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:57:9-59:71
+	android:value
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:59:13-68
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:58:13-58
+uses-sdk
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\fa0ea58ce5947cb821484741702ebd48\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\fa0ea58ce5947cb821484741702ebd48\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\16fcc0ace06257c0aa39570cf9e9fe4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\16fcc0ace06257c0aa39570cf9e9fe4d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-2\files-2.1\daba047956f00f40b5b9236b5459849a\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-2\files-2.1\daba047956f00f40b5b9236b5459849a\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.volley:dc-volley:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\90560fcb767d95d9ea6f00257d0d4efe\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:dc-volley:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\90560fcb767d95d9ea6f00257d0d4efe\AndroidManifest.xml:7:5-43
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a2e50a14a245af6d4c7768d3b3c6b13a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\a2e50a14a245af6d4c7768d3b3c6b13a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2c61507bf6dd09ec9acec4fb938070f6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2c61507bf6dd09ec9acec4fb938070f6\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:20:5-44
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:5:5-7:41
+MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\3ef606c3eff724c5f0d94302884e632b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\3ef606c3eff724c5f0d94302884e632b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\27d0ba6bc2167650c1dc70a365d1bf22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\27d0ba6bc2167650c1dc70a365d1bf22\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2d2e5f7b0974acd9d08b683eaf2384b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2d2e5f7b0974acd9d08b683eaf2384b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\6071687bee2fcb34e7f814d78711845d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\6071687bee2fcb34e7f814d78711845d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ad6501c6601f6566bea4bdc6b19803d7\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence.room:runtime:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ad6501c6601f6566bea4bdc6b19803d7\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\9bb8a9b81a0b6c2f8df906ecf0da0ec1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\9bb8a9b81a0b6c2f8df906ecf0da0ec1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\176a3ce1e471fe5d1672ee0afea8a866\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\176a3ce1e471fe5d1672ee0afea8a866\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5f483826ca90f13fb78af6f4b4af3990\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5f483826ca90f13fb78af6f4b4af3990\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\4a1834c6993b977e9c35829a7718c727\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\4a1834c6993b977e9c35829a7718c727\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2aeeb957862668bb000cc12f0e9cdef2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2aeeb957862668bb000cc12f0e9cdef2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5818575436cb0317a4ff20d9da54eb5b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5818575436cb0317a4ff20d9da54eb5b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\807d5a426537987627b67506bee7207e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\807d5a426537987627b67506bee7207e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\580d4eb8fdd258c45cf0e6a91f4a9ac6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\580d4eb8fdd258c45cf0e6a91f4a9ac6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\31a5f8fa2e342341e5ee95316a44d754\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\31a5f8fa2e342341e5ee95316a44d754\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\d74f3ae3b19c7f93ca6b6319a128f8b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\d74f3ae3b19c7f93ca6b6319a128f8b6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\02582f336a168aee8e7e154dba1af0e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\02582f336a168aee8e7e154dba1af0e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5954eb846a8df1866dfe4e49182aa2ef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\5954eb846a8df1866dfe4e49182aa2ef\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f75a9e8c8a1e3c841e429f17090a5b8f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f75a9e8c8a1e3c841e429f17090a5b8f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\bbeccc5f610fb2704cf556e026873fc1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\bbeccc5f610fb2704cf556e026873fc1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\dd1177a7ff33a74460765ae5a43d6f12\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\dd1177a7ff33a74460765ae5a43d6f12\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e329b4705a533f70dcd28f709feac269\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e329b4705a533f70dcd28f709feac269\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\77183b6ac6264a63ca2f3bb84072e657\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\77183b6ac6264a63ca2f3bb84072e657\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\01d43666bc7824ae183f2ffea58e9d9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\01d43666bc7824ae183f2ffea58e9d9a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\26bbc4753ded697f24cb5d7ba8aeb02f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\26bbc4753ded697f24cb5d7ba8aeb02f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\cf703df275ac6e226c76780a62517713\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\cf703df275ac6e226c76780a62517713\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\301b1a1e36cb2ea39d9cf1b2febbbb3b\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\301b1a1e36cb2ea39d9cf1b2febbbb3b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c42d4d13b351dfedb476934204f8a8c5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c42d4d13b351dfedb476934204f8a8c5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\8a7f5a3024583a5fd64303bdbf797445\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db-framework:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\8a7f5a3024583a5fd64303bdbf797445\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f0aa43da3678bb740f98a5d33edf880b\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.persistence:db:1.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\f0aa43da3678bb740f98a5d33edf880b\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\d3a7faa40900b9147cc6d66d2ee6f78f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\d3a7faa40900b9147cc6d66d2ee6f78f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\434f26b9a208baca92385694304dc9f0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\434f26b9a208baca92385694304dc9f0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e1efca8645e8e7030b168998b33693fe\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e1efca8645e8e7030b168998b33693fe\AndroidManifest.xml:20:5-44
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:7:5-9:41
+MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:7:5-9:41
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:22:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:24:5-81
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:24:22-78
+provider#androidx.work.impl.WorkManagerInitializer
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:27:9-31:43
+	android:authorities
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:29:13-68
+	android:multiprocess
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:31:13-40
+	android:exported
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:28:13-69
+service#androidx.work.impl.background.systemalarm.SystemAlarmService
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:33:9-36:40
+	android:enabled
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:35:13-72
+	android:exported
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:36:13-37
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:34:13-88
+service#androidx.work.impl.background.systemjob.SystemJobService
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:37:9-41:72
+	android:enabled
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:39:13-70
+	android:exported
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:40:13-36
+	android:permission
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:41:13-69
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:38:13-84
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:43:9-50:20
+	android:enabled
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:45:13-36
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:44:13-106
+intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:46:13-49:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:47:17-87
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:47:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:48:17-90
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:48:25-87
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:51:9-58:20
+	android:enabled
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:53:13-36
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:52:13-104
+intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:54:13-57:29
+action#android.intent.action.BATTERY_OKAY
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:55:17-77
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:55:25-74
+action#android.intent.action.BATTERY_LOW
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:56:17-76
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:56:25-73
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:59:9-66:20
+	android:enabled
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:61:13-36
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:60:13-104
+intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:62:13-65:29
+action#android.intent.action.DEVICE_STORAGE_LOW
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:63:17-83
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:63:25-80
+action#android.intent.action.DEVICE_STORAGE_OK
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:64:17-82
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:64:25-79
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:67:9-73:20
+	android:enabled
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:69:13-36
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:68:13-103
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:70:13-72:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:71:17-79
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:71:25-76
+receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:74:9-82:20
+	android:enabled
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:76:13-72
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:75:13-88
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:77:13-81:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:78:17-79
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:78:25-76
+action#android.intent.action.TIME_SET
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:79:17-73
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:79:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:80:17-81
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:80:25-78
+receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:83:9-90:20
+	android:enabled
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:85:13-72
+	android:exported
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:86:13-37
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:84:13-99
+intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:87:13-89:29
+action#androidx.work.impl.background.systemalarm.UpdateProxies
+ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:88:17-98
+	android:name
+		ADDED from [android.arch.work:work-runtime:1.0.0-alpha01] C:\Users\user\.gradle\caches\transforms-2\files-2.1\ffe9d21131034a4966834b8da8ed73fd\AndroidManifest.xml:88:25-95
+activity#com.paypal.android.sdk.payments.PaymentActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:13:9-84
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:13:19-81
+activity#com.paypal.android.sdk.payments.PaymentMethodActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:14:9-90
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:14:19-87
+activity#com.paypal.android.sdk.payments.PaymentConfirmActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:15:9-91
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:15:19-88
+activity#com.paypal.android.sdk.payments.LoginActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:16:9-82
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:16:19-79
+activity#com.paypal.android.sdk.payments.PayPalFuturePaymentActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:17:9-96
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:17:19-93
+activity#com.paypal.android.sdk.payments.FuturePaymentConsentActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:18:9-97
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:18:19-94
+activity#com.paypal.android.sdk.payments.FuturePaymentInfoActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:19:9-94
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:19:19-91
+activity#com.paypal.android.sdk.payments.PayPalProfileSharingActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:20:9-97
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:20:19-94
+activity#com.paypal.android.sdk.payments.ProfileSharingConsentActivity
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:21:9-98
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:21:19-95
+service#com.paypal.android.sdk.payments.PayPalService
+ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:23:9-25:40
+	android:exported
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\caches\transforms-2\files-2.1\2a3838c788bba077b1430dc8220e849b\AndroidManifest.xml:24:13-73
+provider#android.arch.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:25:13-68
+	android:multiprocess
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [android.arch.lifecycle:extensions:1.1.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\0424ced0a9061819cf1926dddbe2d7c2\AndroidManifest.xml:24:13-83
+activity#io.card.payment.CardIOActivity
+ADDED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:22:9-24:66
+	android:configChanges
+		ADDED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:24:13-63
+	android:name
+		ADDED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:23:13-58
+activity#io.card.payment.DataEntryActivity
+ADDED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:25:9-70
+	android:name
+		ADDED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:25:19-67

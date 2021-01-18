@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "784674942893",
+    "firebase_url": "https://supply-rice.firebaseio.com",
+    "project_id": "supply-rice",
+    "storage_bucket": "supply-rice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784674942893:android:834ffe7dbaa6ec83fbfb24",
+        "android_client_info": {
+          "package_name": "com.apiit.shoppingcart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "784674942893-dlrf7fj0t51gikhok0ed8em08junt4pk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apiit.shoppingcart",
+            "certificate_hash": "3ae9e36bd9f9337813b08d5480b6142986638a8c"
+          }
+        },
+        {
+          "client_id": "784674942893-u4k2t3fmdprb8pcndphd835f9dg9et0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIa3RdC5DbkIKkGCfv3f-7oClTZl-Jlfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "784674942893-u4k2t3fmdprb8pcndphd835f9dg9et0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
