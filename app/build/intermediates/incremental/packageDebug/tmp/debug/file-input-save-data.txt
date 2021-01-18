@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Jan 18 14:02:09 IST 2021
+#Mon Jan 18 15:22:19 IST 2021
 17.baseType=DIRECTORY
 4.path=lib/x86/libopencv_core.so
 22.set=NATIVE_RESOURCE

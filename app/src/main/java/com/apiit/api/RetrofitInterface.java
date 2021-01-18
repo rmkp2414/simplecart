@@ -2,7 +2,13 @@ package com.apiit.api;
 
 import com.apiit.model.Product;
 import com.apiit.model.User;
+
+import java.util.List;
+
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.http.Body;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -21,7 +27,13 @@ public interface RetrofitInterface {
 //    @GET("/api/unknown")
 //    Call<Product> getProducts();
     @GET("/products")
-    Call<Product> getProducts();
+    Call<List<Product>> getProducts();
+
+//    @GET("/users.json")
+//    void getProducts(Callback<List<Product>> cb);
+//    @GET("/users.json")
+//    Call<List<Contacts>> getContacts();
+//}
 
 //    @GET("/api/unknown/")
 //    Call<Product> getProductsByCategory(@Query("cat") String cat);
@@ -55,4 +67,11 @@ Call<Product> getProductsByCategory(@Query("cat") String cat);
 //
 //    @POST("users/")
 //    Call<RegisterResponse> registerUsers(@Body RegisterRequest registerRequest);
+
+    @FormUrlEncoded
+    @POST("/login")
+    Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);
+
+    @POST("users/")
+    Call<RegisterResponse> registerUsers(@Body RegisterRequest registerRequest);
 }

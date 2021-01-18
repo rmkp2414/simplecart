@@ -24,8 +24,6 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
-
-
         //getStatusBarHeight();
 
         Button CLEAR_DATABASE = findViewById(R.id.clearthedatabase);

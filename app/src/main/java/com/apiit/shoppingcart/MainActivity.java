@@ -16,6 +16,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.FrameLayout;
+import android.widget.Toast;
+
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
 import com.apiit.model.Product;
@@ -24,12 +26,15 @@ import com.google.gson.Gson;
 import com.google.gson.internal.$Gson$Types;
 import com.google.gson.reflect.TypeToken;
 
+import org.json.JSONArray;
+
 import java.lang.reflect.Type;
 import java.util.Collection;
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity
 implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,6 +49,15 @@ implements NavigationView.OnNavigationItemSelectedListener {
     private NavigationView navigationView;
     RecyclerView recyclerViewVertical;
     public Toolbar toolbar;
+
+
+    private List<Product> toList(String json)
+    {
+        Gson gson = new Gson();
+        Product productList = gson.fromJson(json, Product.class);
+        List<Product> list = productList.getAllItems();
+        return list;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,13 +96,13 @@ implements NavigationView.OnNavigationItemSelectedListener {
             call.enqueue(new Callback<Product>() {
                 @Override
                 public void onResponse(Call<Product> call, retrofit2.Response<Product> response) {
-                    Gson gson = new Gson();
-                    Type collectionType = new TypeToken<Collection<Product>>(){}.getType();
-                    Collection<Product> enums = gson.fromJson(response.body().toString(), collectionType);
-
-
-                    List<Product> allClothes = response.body().getAllItems();
-                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
+//                    Gson gson = new Gson();
+//                    Type collectionType = new TypeToken<Collection<Product>>(){}.getType();
+//                    Collection<Product> enums = gson.fromJson(response.body().toString(), collectionType);
+//
+//
+//                    List<Product> allClothes = response.body().getAllItems();
+//                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
                 }
 
                 @Override
@@ -97,24 +111,49 @@ implements NavigationView.OnNavigationItemSelectedListener {
             });
         }
         else {
-            Call<Product> call = retrofitService.getProducts();
-            call.enqueue(new Callback<Product>() {
+            Call<List<Product>> call = retrofitService.getProducts();
+            call.enqueue(new Callback<List<Product>>() {
                 @Override
-                public void onResponse(Call<Product> call, retrofit2.Response<Product> response) {
+                public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
 
-                    Gson gson = new Gson();
-                    Type collectionType = new TypeToken<Collection<Product>>(){}.getType();
-                    Collection<Product> enums = gson.fromJson(response.body().toString(), collectionType);
-
-                    List<Product> allClothes = response.body().getAllItems();
+//                    List<Product> allClothes = response.body().getAllItems();
+//                    Log.e("all",response.body().toString());
+//                    List<Product> allClothes = toList(response.body().toString());
+                    List<Product> allClothes = response.body();
                     recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
+
                 }
 
                 @Override
-                public void onFailure(Call<Product> call, Throwable t) {
-                    Log.e("error",t.toString());
+                public void onFailure(Call<List<Product>> call, Throwable t) {
+                    Toast.makeText(getApplicationContext(), "Unable to fetch json: " + t.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
+//            call.enqueue(new Callback<Product>() {
+//
+////                @Override
+////                public void onResponse(Call<Product> call, Response<Product> response) {
+////                    //Toast.makeText(MainActivity.this,response.body().toString(),Toast.LENGTH_SHORT).show();
+////                }
+//
+//
+////                @Override
+//                //public void onResponse(Call<Product> call, retrofit2.Response<Product> response) {
+//                public void onResponse(Call<Product> call, Response<Product> response) {
+//
+//                    Gson gson = new Gson();
+//                    Type collectionType = new TypeToken<Collection<Product>>(){}.getType();
+//                    Collection<Product> enums = gson.fromJson(response.body().toString(), collectionType);
+//
+//                    List<Product> allClothes = response.body().getAllItems();
+//                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
+//                }
+//
+//                @Override
+//                public void onFailure(Call<Product> call, Throwable t) {
+//                    Log.e("error",t.toString());
+//                }
+//            });
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

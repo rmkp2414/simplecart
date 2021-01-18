@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.apiit.model.Product;
 import com.apiit.shoppingcart.database.OrderContract;
+import com.squareup.picasso.Picasso;
 
 public class ItemDetails extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -34,18 +35,13 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
 
     ImageView imageView;
     ImageButton plusquantity, minusquantity;
-    TextView quantitynumber, itemName, itemPrice;
+    TextView quantitynumber, itemName, itemPrice,itemDescription,itemCategory;
     RadioButton itemSize;
-    // CheckBox addToppings, addExtraCream;
     Button addToCart;
     int quantity;
     public Uri mCurrentCartUri;
     boolean hasAllRequiredValues = false;
     Product productToCart;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +49,6 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         setContentView(R.layout.activity_item_details);
         Intent intent=getIntent();
         productToCart = new Product();
-
-
 
         imageView = findViewById(R.id.imageViewInfo);
         plusquantity = findViewById(R.id.addquantity);
@@ -69,10 +63,15 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         String ritemName =intent.getStringExtra("itemName");
         String ritemImage =intent.getStringExtra("imgUri");
         String ritemPrice =intent.getStringExtra("itemPrice");
+        String ritemDescription =intent.getStringExtra("itemDesc");
+        String ritemCategory =intent.getStringExtra("itemCat");
 
         itemName.setText(ritemName);
         imageView.setBackgroundColor(1554);
         itemPrice.setText(ritemPrice);
+        itemDescription.setText(ritemDescription);
+        itemCategory.setText(ritemCategory);
+        Picasso.with(getApplicationContext()).load(ritemImage).into(imageView);
 
         productToCart.setId(id);
         productToCart.setSize(selectedSize());
@@ -80,29 +79,7 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         productToCart.setQty(Integer.parseInt(quantitynumber.getText().toString()));
        // productToCart.setPrice(ritemPrice.getText());
 
-        //get item from api
-        //no need we have received data
-//        RetrofitInterface retrofitService = RetrofitClient.getClient().create(RetrofitInterface.class);
-//        Call<Product> call = retrofitService.getProductById(2);
-//        call.enqueue(new Callback<Product>() {
-//            @Override
-//            public void onResponse(Call<Product> call, retrofit2.Response<Product> response) {
-//                //Product product = response.body().getProduct();
-//                Object product = response.body().getProduct();
-//                Log.e("onResponse",product.toString());
-//                //recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(),allClothes));
-//            }
-//
-//            @Override
-//            public void onFailure(Call<Product> call, Throwable t) {
-//                Log.e("er","error is : "+ t.toString() +"");
-//                Toast xx = Toast.makeText(getApplicationContext(),"error : " + t.toString(),Toast.LENGTH_LONG);
-//                xx.show();
-//            }
-//        });
-
-
-        addToCart.setOnClickListener(new View.OnClickListener() {
+       addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ItemDetails.this, SummaryActivity.class);
@@ -122,10 +99,7 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
                 int Price = basePrice * quantity;
                 String setnewPrice = String.valueOf(Price);
                 itemPrice.setText(setnewPrice);
-
-
                 // checkBoxes functionality
-
                // int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
               //  itemPrice.setText("$ " + ifCheckBox);
 
@@ -136,7 +110,7 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
             @Override
             public void onClick(View v) {
 
-                int basePrice = 5;
+                int basePrice = 0;
                 // because we dont want the quantity go less than 0
                 if (quantity == 0) {
                     Toast.makeText(ItemDetails.this, "No Items Below 0", Toast.LENGTH_SHORT).show();
@@ -179,19 +153,8 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, productToCart.getQty());
         values.put(OrderContract.OrderEntry.COLUMN_SIZE, productToCart.getSize());
 
-
-
-//
-     //   Uri newUri =  getContentResolver().query(OrderContract.OrderEntry.CONTENT_URI,null,"_ID="+productToCart.getId(),OrderContract.OrderEntry.COLUMN_SIZE);
-//        mCurrentCartUri = getContentResolver().update(OrderContract.OrderEntry.CONTENT_URI,values,"_ID=1",null);// null, null, null, null);
-//        Sql
-//        Cursor c = OrderContract.OrderEntry.rawQuery("Select IDH, ID, NOME, CONTEUDO from CalcHome
-//                Inner Join Calcs using(id)", null)
-//        return getContentResolver().query(OrderContract.OrderEntry.CONTENT_URI, new String[] { "rowid", "*" }, "_ID=", String[] {"1",""} , null, null, null);
         if (mCurrentCartUri == null) {
-
                 Uri newUri = getContentResolver().insert(OrderContract.OrderEntry.CONTENT_URI, values);
-
                 if (newUri == null) {
                     Toast.makeText(this, "Failed to add to Cart", Toast.LENGTH_SHORT).show();
                 } else {
@@ -199,22 +162,18 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
                 }
             }
 
-
-
         hasAllRequiredValues = true;
         return hasAllRequiredValues;
-
     }
 
     private int selectedSize()
     {
         int selected = -1;
-        selected = findViewById(R.id.smallRadioButton).isSelected() ? 1 : -1;
-        selected = findViewById(R.id.mediumRadioButton).isSelected() ? 2 : -2;
-        selected = findViewById(R.id.largeRadioButton).isSelected() ? 3 : -3;
-        selected = findViewById(R.id.xlRadioButton).isSelected() ? 4 : -4;
+        selected = findViewById(R.id.smallRadioButton).isSelected() ? 1 : selected;
+        selected = findViewById(R.id.mediumRadioButton).isSelected() ? 2 : selected;
+        selected = findViewById(R.id.largeRadioButton).isSelected() ? 3 : selected;
+        selected = findViewById(R.id.xlRadioButton).isSelected() ? 4 : selected;
         return selected;
-
     }
 
     private int CalculatePrice() {
@@ -245,7 +204,6 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
-
         if (cursor == null || cursor.getCount() < 1) {
             return;
         }
