@@ -6,6 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 //    public static final String BASE_URL = "https://reqres.in/";
+//public static final String BASE_URL = "https://localhost:8080/shoppingapp/";
 public static final String BASE_URL = "https://fakestoreapi.com";
 
 

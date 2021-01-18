@@ -96,9 +96,6 @@ implements NavigationView.OnNavigationItemSelectedListener {
             call.enqueue(new Callback<Product>() {
                 @Override
                 public void onResponse(Call<Product> call, retrofit2.Response<Product> response) {
-//                    Gson gson = new Gson();
-//                    Type collectionType = new TypeToken<Collection<Product>>(){}.getType();
-//                    Collection<Product> enums = gson.fromJson(response.body().toString(), collectionType);
 //
 //
 //                    List<Product> allClothes = response.body().getAllItems();

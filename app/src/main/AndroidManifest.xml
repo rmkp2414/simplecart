@@ -34,10 +34,7 @@
         <activity android:name=".CartActivity" />
         <activity android:name=".Register" />
         <activity android:name=".CategoryActivity" /> <!-- <activity -->
-        <!-- android:name="com.apiit.shoppingcart.Register" -->
-        <!-- android:label="@string/title_activity_main2" -->
-        <!-- android:theme="@style/AppTheme.NoActionBar.NoActionBar" /> -->
-<!--        <activity android:name=".REMOVEALL.MainActivity" />-->
+
         <activity android:name=".Order" />
         <activity android:name=".LoginActivity">
             <intent-filter>

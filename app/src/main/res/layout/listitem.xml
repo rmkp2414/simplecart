@@ -49,16 +49,16 @@
                 android:layout_marginRight="12dp"
                 android:layout_toRightOf="@+id/itemImage"
                 android:textSize="12sp"
-                tools:text="" />
+                tools:text="sample description" />
 
             <TextView
                 android:id="@+id/itemCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@id/itemDescription"
+                android:layout_toRightOf="@id/itemImage"
                 android:layout_below="@id/itemDescription"
-                android:text="Cat" />
+                android:text="Category" />
 
             <TextView
                 android:id="@+id/itemPrice"
@@ -66,8 +66,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:textSize="20sp"
-                android:layout_toRightOf="@id/itemCategory"
-                android:layout_below="@+id/itemDescription"
+                android:layout_toRightOf="@id/itemImage"
+                android:layout_below="@+id/itemCategory"
+                android:textColor="@color/colorPrimary"
                 android:text="$$$" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>

@@ -52,18 +52,6 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
         listView.setAdapter(mAdapter);
     }
 
-//    public void getStatusBarHeight() {
-//        int result = 0;
-//        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-//        if (resourceId > 0) {
-//            result = getResources().getDimensionPixelSize(resourceId);
-//        }
-//
-//        RelativeLayout summercard = findViewById(R.id.ordersummarycard);
-//        summercard.setPadding(0,result,0,0);
-//        //return result;
-//    }
-
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         String[] projection = {OrderContract.OrderEntry._ID,

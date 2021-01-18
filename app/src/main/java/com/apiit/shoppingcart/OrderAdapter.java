@@ -77,10 +77,6 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             int position = getAdapterPosition();
 
             Intent intent = new Intent(context, ItemDetails.class);
-//            intent.putExtra("id",position);
-//            intent.putExtra("itemName",receivingItemName);
-//            intent.putExtra("imgUri",receivingItemName);
-//            intent.putExtra("itemPrice",receivingItemPrice);
 
             intent.putExtra("id",position);
             intent.putExtra("itemName",modelList.get(position).getTitle());

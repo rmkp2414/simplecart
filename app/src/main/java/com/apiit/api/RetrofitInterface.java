@@ -2,11 +2,9 @@ package com.apiit.api;
 
 import com.apiit.model.Product;
 import com.apiit.model.User;
-
 import java.util.List;
-
 import retrofit2.Call;
-import retrofit2.Callback;
+
 import retrofit2.http.Body;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -24,8 +22,6 @@ public interface RetrofitInterface {
     @GET("/api/get")
     Call<Product> getProductById();
 
-//    @GET("/api/unknown")
-//    Call<Product> getProducts();
     @GET("/products")
     Call<List<Product>> getProducts();
 
@@ -33,12 +29,10 @@ public interface RetrofitInterface {
 //    void getProducts(Callback<List<Product>> cb);
 //    @GET("/users.json")
 //    Call<List<Contacts>> getContacts();
-//}
-
 //    @GET("/api/unknown/")
 //    Call<Product> getProductsByCategory(@Query("cat") String cat);
-@GET("/products")
-Call<Product> getProductsByCategory(@Query("cat") String cat);
+    @GET("/products")
+    Call<Product> getProductsByCategory(@Query("cat") String cat);
 
 //    @POST("/api/login")
 //    abstract public Call<User> loginUser();
@@ -54,13 +48,7 @@ Call<Product> getProductsByCategory(@Query("cat") String cat);
             @Query("email") String email,
             @Query("password") String password
     );
-//    Call<LoginResponse> register(
-//            @Query("email") String email,
-//            @Query("password") String password,
-//            @Query("name") String name,
-//            @Query("number") String number
-//    );
-
+    
 //    @FormUrlEncoded
 //    @POST("/login")
 //    Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);

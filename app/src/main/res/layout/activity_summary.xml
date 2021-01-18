@@ -21,7 +21,14 @@
         android:id="@+id/list">
 
 
+        <Button
+            android:id="@+id/clearthedatabase"
+            android:layout_width="wrap_content"
 
+            android:layout_height="wrap_content"
+            android:text="CLear DB"
+            android:textColor="#000"
+            android:textSize="20sp" />
     </ListView>
 
     <!-- Footer aligned to bottom -->
@@ -36,19 +43,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/clearthedatabase"
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-        android:text="CLear DB"
-        android:textColor="#000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

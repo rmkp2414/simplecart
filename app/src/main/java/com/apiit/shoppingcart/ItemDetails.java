@@ -23,16 +23,6 @@ import com.squareup.picasso.Picasso;
 
 public class ItemDetails extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_item_details);
-//    }
-
-    // first of all we will get the views that are  present in the layout of info
-
-
-
     ImageView imageView;
     ImageButton plusquantity, minusquantity;
     TextView quantitynumber, itemName, itemPrice,itemDescription,itemCategory;
@@ -57,6 +47,7 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         itemName = findViewById(R.id.itemName);
         itemPrice = findViewById(R.id.itemPrice);
         addToCart = findViewById(R.id.addtocart);
+        itemDescription = findViewById(R.id.itemDescription);
 
 
         int id=intent.getIntExtra("id",0);
@@ -70,7 +61,8 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         imageView.setBackgroundColor(1554);
         itemPrice.setText(ritemPrice);
         itemDescription.setText(ritemDescription);
-        itemCategory.setText(ritemCategory);
+//        itemCategory.setText(ritemCategory);
+        itemCategory.setText("category");
         Picasso.with(getApplicationContext()).load(ritemImage).into(imageView);
 
         productToCart.setId(id);
