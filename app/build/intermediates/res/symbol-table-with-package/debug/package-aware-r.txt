@@ -1072,6 +1072,7 @@ drawable thaitea
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font abril_fatface
+font catamaran
 id ALT
 id CTRL
 id ConstraintLayout
@@ -1103,6 +1104,8 @@ id add
 id add_profile_icon
 id add_to_cart_btn
 id addquantity
+id addressline_1
+id addressline_2
 id addtocart
 id alertTitle
 id all
@@ -1110,6 +1113,7 @@ id always
 id appBarLayout
 id async
 id auto
+id back
 id barrier
 id beginning
 id blocking
@@ -1186,6 +1190,7 @@ id include
 id info
 id invisible
 id italic
+id itemCat
 id itemCategory
 id itemDescription
 id itemImage
@@ -1306,6 +1311,7 @@ id src_in
 id src_over
 id standard
 id start
+id state
 id status_bar_latest_event_content
 id stretch
 id submenuarrow
@@ -1345,6 +1351,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id username
 id viewPager
 id view_offset_helper
 id visible
@@ -1352,6 +1359,7 @@ id withText
 id wrap
 id wrap_content
 id xlRadioButton
+id zip
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
@@ -1501,8 +1509,6 @@ string abc_toolbar_collapse_description
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
-string bubbletea
-string cappcuni
 string character_counter_content_description
 string character_counter_pattern
 string default_web_client_id
@@ -1514,11 +1520,8 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
-string greentea
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
-string latte
-string match
 string menu_home
 string menu_send
 string menu_share
@@ -1526,8 +1529,6 @@ string mtrl_chip_close_icon_content_description
 string nav_header_desc
 string navigation_drawer_close
 string navigation_drawer_open
-string orangesmoothie
-string orangevanilla
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -1536,8 +1537,6 @@ string path_password_strike_through
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
-string tea
-string thaitea
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

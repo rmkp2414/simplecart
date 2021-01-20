@@ -27,7 +27,6 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
         //getStatusBarHeight();
 
         Button CLEAR_DATABASE = findViewById(R.id.clearthedatabase);
-
         CLEAR_DATABASE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,19 +35,19 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
         });
 
         Button checkOutButton = findViewById(R.id.checkoutBtn);
-
         checkOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(SummaryActivity.this, PayPalPaymentActivity.class);
+
                 startActivity(intent);
             }
         });
 
         getLoaderManager().initLoader(LOADER, null, this);
         ListView listView = findViewById(R.id.list);
-        mAdapter = new CartAdapter(this, null);
+        mAdapter = new CartAdapter(this,null);
         listView.setAdapter(mAdapter);
     }
 

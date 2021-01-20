@@ -19,7 +19,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     Context context;
 
     Product selectingItem;
-    String receivingItemName,receivingItemDescription,receivingItemRating,receivingItemImage,receivingItemCategory,receivingItemPrice;
+    String receivingItemName,receivingItemDescription,receivingItemImage,receivingItemCategory,receivingItemPrice;
 
 
     public OrderAdapter(Context context, List<Product> modelList) {
@@ -40,7 +40,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
        receivingItemName         = modelList.get(position).getTitle();
        receivingItemDescription  = modelList.get(position).getDescription();
        receivingItemPrice        = modelList.get(position).getPrice();
-       receivingItemRating       = modelList.get(position).getRating();
+       receivingItemCategory       = modelList.get(position).getCategory();
        receivingItemImage        = modelList.get(position).getImage();
 
         holder.itemName.setText(receivingItemName);
@@ -83,8 +83,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             intent.putExtra("imgUri",modelList.get(position).getImage());
             intent.putExtra("itemPrice",modelList.get(position).getPrice());
             intent.putExtra("itemDesc",modelList.get(position).getDescription());
-            intent.putExtra("itemCat",modelList.get(position).getCategory());
-            //intent.putExtra("selectedItem", valueOf position);
+            intent.putExtra("itemCat",modelList.get(position).getCategory() );
             context.startActivity(intent);
         }
     }

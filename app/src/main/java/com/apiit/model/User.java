@@ -1,6 +1,6 @@
 package com.apiit.model;
 
-import com.apiit.dto.ProductDetailsDto;
+
 
 import java.util.List;
 
@@ -13,37 +13,37 @@ public class User {
 
     private String userType;
 
-    private List<ProductDetailsDto> products;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getUserType() {
-        return userType;
-    }
-
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
-
-    public List<ProductDetailsDto> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<ProductDetailsDto> products) {
-        this.products = products;
-    }
+//    private List<ProductDetailsDto> products;
+//
+//    public String getUsername() {
+//        return username;
+//    }
+//
+//    public void setUsername(String username) {
+//        this.username = username;
+//    }
+//
+//    public String getUserId() {
+//        return userId;
+//    }
+//
+//    public void setUserId(String userId) {
+//        this.userId = userId;
+//    }
+//
+//    public String getUserType() {
+//        return userType;
+//    }
+//
+//    public void setUserType(String userType) {
+//        this.userType = userType;
+//    }
+//
+//    public List<ProductDetailsDto> getProducts() {
+//        return products;
+//    }
+//
+//    public void setProducts(List<ProductDetailsDto> products) {
+//        this.products = products;
+//    }
 }

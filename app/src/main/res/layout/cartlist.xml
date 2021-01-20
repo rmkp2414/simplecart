@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="20dp"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="20dp">
 
 
     <TextView
@@ -13,46 +14,73 @@
 
         android:layout_marginLeft="10dp"
         android:text="Item Name"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/qtyInCart"
+        app:layout_constraintStart_toStartOf="@+id/sizeInCart"
+        app:layout_constraintTop_toTopOf="@+id/qtyInCart"
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
+        android:id="@+id/qtyInCart"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
         android:layout_toRightOf="@+id/itemNameInCart"
         android:text="x"
         android:textStyle="bold"
-        android:id="@+id/qtyInCart"
-        android:layout_marginLeft="10dp"/>
-
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/sizeInCart"
-            android:textStyle="italic"
-            android:layout_marginLeft="20dp"
-            android:layout_below="@id/itemNameInCart"
-            android:text="size here"/>
+        app:layout_constraintBottom_toBottomOf="@+id/priceInCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toEndOf="@+id/itemNameInCart"
+        app:layout_constraintTop_toTopOf="@+id/priceInCart"
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
+        android:id="@+id/sizeInCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemNameInCart"
+        android:layout_marginEnd="328dp"
+        android:text="size here"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemNameInCart"
+        app:layout_constraintVertical_bias="0.007" />
+
+    <TextView
+        android:id="@+id/priceInCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginRight="10dp"
         android:text="$10"
-        android:id="@+id/priceInCart"
-        android:layout_marginRight="10dp"/>
+        app:layout_constraintBottom_toBottomOf="@+id/removeItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintStart_toEndOf="@+id/qtyInCart"
+        app:layout_constraintTop_toTopOf="@+id/removeItem"
+        app:layout_constraintVertical_bias="0.022" />
 
     <Button
         android:id="@+id/removeItem"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="157dp"
+        android:layout_marginStart="52dp"
         android:layout_marginRight="111dp"
         android:layout_toLeftOf="@+id/priceInCart"
         android:layout_toRightOf="@id/itemNameInCart"
-        android:background="@drawable/ic_delete_black_24dp" />
+        android:background="@drawable/ic_delete_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toEndOf="@+id/priceInCart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.002" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -20,6 +20,7 @@ import android.widget.Toast;
 //import com.google.firebase.firestore.FirebaseFirestore;
 
 import com.apiit.api.LoginResponse;
+import com.apiit.api.RegisterResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
 
@@ -31,13 +32,10 @@ import retrofit2.Callback;
 
 public class Register extends AppCompatActivity {
 
-    EditText mFullName,mEmail,mPassword,mPhone;
-    Button mRegisterBtn;
-    TextView mLoginBtn;
-//    FirebaseAuth fAuth;
+    EditText fullName,userName,eMail,phoneNumber,password,addressLine1,addressLine2,state,zip;
+    Button registerBtn;
+    TextView loginBtn;
     ProgressBar progressBar;
-//    private FirebaseFirestore firebaseFirestore;
-
     RetrofitInterface retrofitService;
 
     @Override
@@ -45,115 +43,73 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mFullName = findViewById(R.id.name);
-        mEmail = findViewById(R.id.email);
-        mPassword = findViewById(R.id.password);
-        mPhone = findViewById(R.id.phone);
-        mRegisterBtn = findViewById(R.id.registerbtn);
-        mLoginBtn = findViewById(R.id.createText);
-
-
-
+        fullName = findViewById(R.id.name);
+        userName = findViewById(R.id.username);
+        eMail = findViewById(R.id.email);
+        phoneNumber = findViewById(R.id.phone);
+        password = findViewById(R.id.password);
+        addressLine1 = findViewById(R.id.addressline_1);
+        addressLine2 = findViewById(R.id.addressline_2);
+        state = findViewById(R.id.state);
+        zip = findViewById(R.id.zip);
+        registerBtn = findViewById(R.id.registerbtn);
+        loginBtn = findViewById(R.id.createText);
         progressBar = findViewById(R.id.progressBar);
 
-//        if(fAuth.getCurrentUser() != null){
-//            startActivity(new Intent(getApplicationContext(),MainActivity.class));
-//            finish();
-//        }
-
-        mRegisterBtn.setOnClickListener(new View.OnClickListener() {
+        registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            String userfullName = fullName.getText().toString().trim();
+            String useruserName = userName.getText().toString().trim();
+            String usereMail = eMail.getText().toString().trim();
+            String userphoneNumber = phoneNumber.getText().toString().trim();
+            String userpassword = password.getText().toString().trim();
+            String useraddressLine1 = addressLine1.getText().toString().trim();
+            String useraddressLine2 = addressLine2.getText().toString().trim();
+            String userstate = state.getText().toString().trim();
+            String userzip = zip.getText().toString().trim();
 
-                String email = mEmail.getText().toString().trim();
-                String password = mPassword.getText().toString().trim();
-                String name = mFullName.getText().toString().trim();
-                String number = mPhone.getText().toString().trim();
+            if(TextUtils.isEmpty(userfullName))     { fullName.setError("Name Required");return;}
+            if(TextUtils.isEmpty(useruserName))     { userName.setError("User Name Required");return;}
+            if(TextUtils.isEmpty(usereMail))        { eMail.setError("Email Required");return;}
+            if(TextUtils.isEmpty(userphoneNumber))  { phoneNumber.setError("Phone Number Required");return;}
+            if(TextUtils.isEmpty(userpassword))     { password.setError("Password Required");return;}
+            if(TextUtils.isEmpty(useraddressLine1)) { addressLine1.setError("Address Required");return;}
+            if(TextUtils.isEmpty(userstate))        { state.setError("State Required");return;}
+            if(TextUtils.isEmpty(userzip))          { zip.setError("Zip Required");return;}
+            if(password.length() < 8)               { password.setError("Password must 8 Characters");return; }
+            if (phoneNumber.length() == 9)          { phoneNumber.setError("Fill the Phone Number");return;}
 
-                if(TextUtils.isEmpty(email)){
-                    mEmail.setError("Email is Required");
-                    return;
-                }
-                if(TextUtils.isEmpty(password)){
-                    mPassword.setError("Password is Required");
-                    return;
-                }
-                if(password.length() < 8){
-                    mPassword.setError("Password must 8 Characters");
-                }
-                if (TextUtils.isEmpty(name)){
-                    mFullName.setError("Fill the FullName");
-                    return;
-                }
-                if (number.length() == 9){
-                    mPhone.setError("Fill the Phone Number");
-                    return;
-                }
-
-                retrofitService   = RetrofitClient.getClient().create(RetrofitInterface.class);
-                progressBar.setVisibility(View.VISIBLE);
-
-                //User Register in Firebase
-
-//                retrofitService.register(email, password,name,number).enqueue(new Callback<LoginResponse>() {
-                    retrofitService.register(email, password).enqueue(new Callback<LoginResponse>() {
-
-
+            retrofitService   = RetrofitClient.getClient().create(RetrofitInterface.class);
+            progressBar.setVisibility(View.VISIBLE);
+            retrofitService.register(
+                    userfullName,
+                    useruserName,
+                    usereMail,
+                    userphoneNumber,
+                    userpassword,
+                    useraddressLine1,
+                    userstate,
+                    userzip).enqueue(new Callback<RegisterResponse>() {
                     @Override
-                    public void onResponse(Call<LoginResponse> call, retrofit2.Response<LoginResponse> response) {
+                    public void onResponse(Call<RegisterResponse> call, retrofit2.Response<RegisterResponse> response) {
                         progressBar.setVisibility(View.INVISIBLE);
                         Toast toast = Toast.makeText(getApplicationContext(),"Register Success",Toast.LENGTH_SHORT);
                         //startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         return;
                     }
-
                     @Override
-                    public void onFailure(@NonNull Call<LoginResponse> call, @NonNull Throwable t) {
+                    public void onFailure(@NonNull Call<RegisterResponse> call, @NonNull Throwable t) {
                         progressBar.setVisibility(View.INVISIBLE);
                         t.printStackTrace();
                         Toast toast = Toast.makeText(getApplicationContext(),"Error Occurred",Toast.LENGTH_SHORT);
                         toast.show();
-
-                        // hideLoading();
                     }
                 });
-
-//                fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                   if(task.isSuccessful()){
-//
-//                       Map<Object,String> userdata = new HashMap<>();
-//                       userdata.put("Full Name",mFullName.getText().toString());
-//                       userdata.put("Email",mEmail.getText().toString());
-//                       userdata.put("Password",mPassword.getText().toString());
-//                       userdata.put("Phone Number",mPhone.getText().toString());
-//
-//                       firebaseFirestore.collection("USERS")
-//                               .add(userdata)
-//                               .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-//                                   @Override
-//                                   public void onComplete(@androidx.annotation.NonNull Task<DocumentReference> task) {
-//                                       if (task.isSuccessful()){
-//
-//                                           Toast.makeText(Register.this,"User Created",Toast.LENGTH_SHORT).show();
-//                                           startActivity(new Intent(getApplicationContext(),MainActivity.class));
-//                                       }else {
-//                                           Toast.makeText(Register.this,"Erroe !!" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-//                                           progressBar.setVisibility(View.GONE);
-//                                       }
-//                                   }
-//                               });
-//                   }else {
-//                       Toast.makeText(Register.this,"Erroe !!" + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
-//                       progressBar.setVisibility(View.GONE);
-//                   }
-//                    }
-//                });
             }
         });
 
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));

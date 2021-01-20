@@ -5,6 +5,7 @@ import com.apiit.model.User;
 import java.util.List;
 import retrofit2.Call;
 
+import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -44,17 +45,15 @@ public interface RetrofitInterface {
     Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
 
     @POST("/api/register")
-    Call<LoginResponse> register(
-            @Query("email") String email,
-            @Query("password") String password
-    );
-    
-//    @FormUrlEncoded
-//    @POST("/login")
-//    Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);
-//
-//    @POST("users/")
-//    Call<RegisterResponse> registerUsers(@Body RegisterRequest registerRequest);
+    Call<RegisterResponse> register(
+            @Query("userfullName") String userfullName,
+            @Query("useruserName") String useruserName,
+            @Query("usereMail") String usereMail,
+            @Query("userphoneNumber") String userphoneNumber,
+            @Query("userpassword") String userpassword,
+            @Query("useraddressLine1") String useraddressLine1,
+            @Query("userstate") String userstate,
+            @Query("userzi") String userzip);
 
     @FormUrlEncoded
     @POST("/login")

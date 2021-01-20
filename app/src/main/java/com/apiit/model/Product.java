@@ -42,7 +42,7 @@ public class Product {
 
 
     @SerializedName("size")
-    private int size;
+    private String size;
     @SerializedName("product")
     private Product product;
     @SerializedName("qty")
@@ -68,7 +68,7 @@ public class Product {
         return product;
     }
 
-    public void setSize(int size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
@@ -76,7 +76,7 @@ public class Product {
         this.product = product;
     }
 
-    public int getSize() {
+    public String getSize() {
         return size;
     }
 

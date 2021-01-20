@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,7 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         itemPrice = findViewById(R.id.itemPrice);
         addToCart = findViewById(R.id.addtocart);
         itemDescription = findViewById(R.id.itemDescription);
+        itemCategory = findViewById(R.id.itemCat);
 
 
         int id=intent.getIntExtra("id",0);
@@ -61,19 +63,38 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         imageView.setBackgroundColor(1554);
         itemPrice.setText(ritemPrice);
         itemDescription.setText(ritemDescription);
-//        itemCategory.setText(ritemCategory);
-        itemCategory.setText("category");
+        itemCategory.setText(ritemCategory);
+
         Picasso.with(getApplicationContext()).load(ritemImage).into(imageView);
 
-        productToCart.setId(id);
-        productToCart.setSize(selectedSize());
-        productToCart.setTitle(ritemName);
-        productToCart.setQty(Integer.parseInt(quantitynumber.getText().toString()));
-       // productToCart.setPrice(ritemPrice.getText());
+//        productToCart.setId(id);
+//        productToCart.setSize(selectedSize());
+//        productToCart.setTitle(ritemName);
+//        productToCart.setQty(Integer.parseInt(quantitynumber.getText().toString()));
+//        productToCart.setPrice(ritemPrice);
 
        addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(selectedSize().equals(""))
+                {
+                    Toast.makeText(getApplicationContext(), "Please select a cloth size before adding to the cart", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(quantitynumber.getText().toString().equals("0"))
+                {
+                    Toast.makeText(getApplicationContext(), "Please select at least one item", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
+                productToCart.setId(id);
+                productToCart.setSize(selectedSize());
+                productToCart.setTitle(itemName.getText().toString());
+                productToCart.setQty(Integer.parseInt(quantitynumber.getText().toString()));
+                productToCart.setPrice(itemPrice.getText().toString());
+
                 Intent intent = new Intent(ItemDetails.this, SummaryActivity.class);
                 startActivity(intent);
                 // once this button is clicked we want to save our values in the database and send those values
@@ -85,16 +106,12 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         plusquantity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int basePrice = 5;
+                double basePrice = Double.parseDouble(itemPrice.getText().toString());
                 quantity++;
                 displayQuantity();
-                int Price = basePrice * quantity;
-                String setnewPrice = String.valueOf(Price);
-                itemPrice.setText(setnewPrice);
-                // checkBoxes functionality
-               // int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-              //  itemPrice.setText("$ " + ifCheckBox);
-
+                double Price1 = basePrice * quantity;
+                String setNewPrice = String.valueOf(Price1);
+                itemPrice.setText(setNewPrice);
             }
         });
 
@@ -102,44 +119,28 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
             @Override
             public void onClick(View v) {
 
-                int basePrice = 0;
-                // because we dont want the quantity go less than 0
+                double basePrice = Double.parseDouble(itemPrice.getText().toString());
                 if (quantity == 0) {
-                    Toast.makeText(ItemDetails.this, "No Items Below 0", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ItemDetails.this, "Min Qty should be 1", Toast.LENGTH_SHORT).show();
                 } else {
                     quantity--;
                     displayQuantity();
-                    int coffePrice = basePrice * quantity;
-                    String setnewPrice = String.valueOf(coffePrice);
-                    itemPrice.setText(setnewPrice);
-
-
-                    // checkBoxes functionality
-
-                   // int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-//                    itemPrice.setText("$ " + CalculatePrice());
+                    double Price2 = basePrice * quantity;
+                    String setNewPrice = String.valueOf(Price2);
+                    itemPrice.setText(setNewPrice);
                 }
             }
         });
-
-
-
     }
 
     private boolean SaveCart() {
-
-
-
 //        // getting the values from our views
 //        String name = itemName.getText().toString();
 //        String price = itemPrice.getText().toString();
 //        String quantity = quantitynumber.getText().toString();
-
         int id  = 0;
-
-
         ContentValues values = new ContentValues();
-//        values.put(OrderContract.OrderEntry._ID,productToCart.getId());
+//      values.put(OrderContract.OrderEntry._ID,productToCart.getId());
         values.put(OrderContract.OrderEntry.COLUMN_NAME, productToCart.getTitle());
         values.put(OrderContract.OrderEntry.COLUMN_PRICE, productToCart.getPrice());
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, productToCart.getQty());
@@ -148,9 +149,9 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         if (mCurrentCartUri == null) {
                 Uri newUri = getContentResolver().insert(OrderContract.OrderEntry.CONTENT_URI, values);
                 if (newUri == null) {
-                    Toast.makeText(this, "Failed to add to Cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Error occured while processing your cart", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(this, "Success  adding to Cart", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Item Successfully Added to the Cart", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -158,14 +159,16 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         return hasAllRequiredValues;
     }
 
-    private int selectedSize()
+    private String selectedSize()
     {
-        int selected = -1;
-        selected = findViewById(R.id.smallRadioButton).isSelected() ? 1 : selected;
-        selected = findViewById(R.id.mediumRadioButton).isSelected() ? 2 : selected;
-        selected = findViewById(R.id.largeRadioButton).isSelected() ? 3 : selected;
-        selected = findViewById(R.id.xlRadioButton).isSelected() ? 4 : selected;
-        return selected;
+        RadioGroup rb = findViewById(R.id.radioGroup);
+        int selectedId = rb.getCheckedRadioButtonId();
+        if(selectedId==-1)
+        {
+            return "";
+        }
+        RadioButton radioButton = (RadioButton) findViewById(selectedId);
+        return radioButton.getText().toString();
     }
 
     private int CalculatePrice() {
@@ -224,6 +227,5 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         itemName.setText("");
         itemPrice.setText("");
         quantitynumber.setText("");
-//        itemSize.setsele.setText("");
     }
 }
