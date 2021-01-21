@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.apiit.api.LoginRequest;
 import com.apiit.api.LoginResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
@@ -20,6 +22,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -64,31 +67,78 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+                LoginRequest loginRequest = new LoginRequest();
+                loginRequest.setUsername(mEmail.getText().toString());
+                loginRequest.setPassword(mPassword.getText().toString());
                 retrofitService   = RetrofitClient.getClient().create(RetrofitInterface.class);
-                retrofitService.login(email, password).enqueue(new Callback<LoginResponse>() {
+
+//                Call<String> callx = retrofitService.sayHello();
+//
+//
+//
+//                callx.enqueue(new Callback<String>() {
+//                    @Override
+//                    public void onResponse(Call<String> call, Response<String> response) {
+//                        Toast.makeText(getApplicationContext(),"Hi  "+response.body(),Toast.LENGTH_LONG).show();
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<String> call, Throwable t) {
+//                        Toast.makeText(getApplicationContext(),"Error in User Name or Passwrod",Toast.LENGTH_LONG).show();
+//                    }
+//                });
+
+                Call<LoginResponse> call = retrofitService.login(loginRequest);
+                call.enqueue(new Callback<LoginResponse>() {
                     @Override
-                    public void onResponse(Call<LoginResponse> call, retrofit2.Response<LoginResponse> response) {
-//                        LoginResponse loginresponse = response.body();
-//                        if(loginresponse)
+                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                        if(response.isSuccessful())
+                        {
+                            String user = response.body().getJwtToken();
+
+
+                            //rightaway get user details
+
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(),"Error in User Name or Passwrod",Toast.LENGTH_LONG).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<LoginResponse> call, Throwable t) {
+                        Toast.makeText(getApplicationContext(),"Exception",Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                progressBar.setVisibility(View.VISIBLE);
+
+//                retrofitService.login(email, password).enqueue(new Callback<LoginResponse>() {
+//                    @Override
+//                    public void onResponse(Call<LoginResponse> call, retrofit2.Response<LoginResponse> response) {
+//                        String loginresponse = response.body().getJWT_TOKEN();
+//                        if (loginresponse != null) {
+//
+//                        }
+//                       else
 //                        {
 //
 //                        }
-
-                        progressBar.setVisibility(View.INVISIBLE);
-                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        return;
-                    }
-
-                    @Override
-                    public void onFailure(@NonNull Call<LoginResponse> call, @NonNull Throwable t) {
-                        progressBar.setVisibility(View.INVISIBLE);
-                        t.printStackTrace();
-                        Toast toast = Toast.makeText(getApplicationContext(),"Error Occurred",Toast.LENGTH_SHORT);
-                        toast.show();
-                       // hideLoading();
-                    }
-                });
+//
+//                        progressBar.setVisibility(View.INVISIBLE);
+//                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+//                        return;
+//                    }
+//
+//                    @Override
+//                    public void onFailure(@NonNull Call<LoginResponse> call, @NonNull Throwable t) {
+//                        progressBar.setVisibility(View.INVISIBLE);
+//                        t.printStackTrace();
+//                        Toast toast = Toast.makeText(getApplicationContext(),"Error Occurred",Toast.LENGTH_SHORT);
+//                        toast.show();
+//                       // hideLoading();
+//                    }
+//                });
             //}
 
 

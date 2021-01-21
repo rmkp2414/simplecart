@@ -44,7 +44,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/edittextbackground"
-        android:text="eve.holt@reqres.in"
+        android:text="kapila"
 
 
 
@@ -69,7 +69,7 @@
         android:layout_marginBottom="8dp"
 
         android:hint="Password"
-        android:text="cityslicka"
+        android:text="12345678"
         android:background="@drawable/edittextbackground"
         android:inputType="textPassword"
         android:padding="10dp"

@@ -9,6 +9,7 @@ import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -41,8 +42,8 @@ public interface RetrofitInterface {
 //    @POST("/api/login")
 //    public abstract Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
 
-    @POST("/api/login")
-    Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
+//    @POST("/api/login")
+//    Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
 
     @POST("/api/register")
     Call<RegisterResponse> register(
@@ -61,4 +62,17 @@ public interface RetrofitInterface {
 
     @POST("users/")
     Call<RegisterResponse> registerUsers(@Body RegisterRequest registerRequest);
+
+
+    /////////////////////////////////////////////NEW///////////////////////////
+//    @POST("/api/login")
+//    Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
+
+    @Headers({"Content-Type: application/json"})
+    @POST("/api/authenticate")
+    Call<LoginResponse> login(@Body LoginRequest login);
+
+    @GET("/api/hello")
+    Call<String> sayHello();
+
 }
