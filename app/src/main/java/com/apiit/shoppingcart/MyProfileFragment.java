@@ -9,17 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
-
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MyCartFragment extends Fragment {
+public class MyProfileFragment extends Fragment {
 
 
-    public MyCartFragment() {
+    public MyProfileFragment() {
         // Required empty public constructor
     }
 
@@ -29,7 +26,7 @@ public class MyCartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_my_cart, container, false);
+        View view = inflater.inflate(R.layout.fragment_my_profile, container, false);
 
         cartItemRecyclerView = view.findViewById(R.id.cart_item_recyclerview);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());

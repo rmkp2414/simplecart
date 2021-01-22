@@ -1104,8 +1104,8 @@ id add
 id add_profile_icon
 id add_to_cart_btn
 id addquantity
+id address
 id addressline_1
-id addressline_2
 id addtocart
 id alertTitle
 id all
@@ -1128,6 +1128,7 @@ id cart_item_recyclerview
 id category_icon
 id category_name
 id category_recyclerview
+id ccnumber
 id center
 id center_horizontal
 id center_vertical
@@ -1143,7 +1144,9 @@ id container
 id content
 id contentPanel
 id coordinator
+id country
 id createText
+id csv
 id custom
 id customPanel
 id decor_content_parent
@@ -1168,6 +1171,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id expirationdate
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1198,6 +1202,7 @@ id itemName
 id itemNameInCart
 id itemPrice
 id item_touch_helper_previous_elevation
+id label
 id labeled
 id largeLabel
 id largeRadioButton
@@ -1267,6 +1272,7 @@ id removeItem
 id right
 id right_icon
 id right_side
+id save
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1290,6 +1296,7 @@ id search_voice_btn
 id select
 id select_dialog_listview
 id selected
+id shippingcost
 id shopName
 id shortcut
 id showCustom
@@ -1321,6 +1328,7 @@ id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
+id tax
 id text
 id text2
 id textSpacerNoButtons
@@ -1340,7 +1348,8 @@ id title_template
 id toolbar
 id top
 id topPanel
-id total_cart_amount
+id total
+id totalCartPrice
 id touch_outside
 id transition_current_scene
 id transition_layout_save
@@ -1417,6 +1426,7 @@ layout activity_payment
 layout activity_paypal_confirmation
 layout activity_product__details
 layout activity_register
+layout activity_shipping
 layout activity_summary
 layout app_bar_main
 layout cartlist
@@ -1437,7 +1447,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_home
-layout fragment_my_cart
+layout fragment_my_profile
 layout item
 layout listitem
 layout mtrl_layout_snackbar

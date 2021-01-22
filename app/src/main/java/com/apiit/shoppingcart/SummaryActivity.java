@@ -12,8 +12,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.apiit.model.Cart;
 import com.apiit.shoppingcart.database.OrderContract;
+import com.apiit.utilities.Utilities;
 
 public class SummaryActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -38,17 +41,27 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
         checkOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(SummaryActivity.this, PayPalPaymentActivity.class);
+                Intent intent = new Intent(SummaryActivity.this, Shipping.class);
 
                 startActivity(intent);
+
+//                Intent intent = new Intent(SummaryActivity.this, PayPalPaymentActivity.class);
+//
+//                startActivity(intent);
             }
         });
+
+
+
+
 
         getLoaderManager().initLoader(LOADER, null, this);
         ListView listView = findViewById(R.id.list);
         mAdapter = new CartAdapter(this,null);
         listView.setAdapter(mAdapter);
+        TextView totalPrice = findViewById(R.id.totalCartPrice);
+        totalPrice.setText(Utilities.getFinalCartValue()+" LKR");
+
     }
 
     @Override

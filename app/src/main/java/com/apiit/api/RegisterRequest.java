@@ -3,43 +3,15 @@ package com.apiit.api;
 public class RegisterRequest {
 
     private String username;
-
-
-    //@Convert(converter = DbEncryptionService.class)
     private String password;
-
-
     private String userType;
-
-
-    private String firstName;
-
-
-    private String lastName;
-
+    private String fullname;
+    private String addressline;
     private String country;
-
-    private String addressLine1;
-
-    private String addressLine2;
-
+    private String state;
     private String zipCode;
-
-    private String city;
-
-    private String province;
-
     private String phoneNumber;
-
     private String email;
-
-//    public Integer getId() {
-//        return id;
-//    }
-//
-//    public void setId(Integer id) {
-//        this.id = id;
-//    }
 
     public String getUsername() {
         return username;
@@ -65,20 +37,12 @@ public class RegisterRequest {
         this.userType = userType;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getCountry() {
@@ -89,20 +53,12 @@ public class RegisterRequest {
         this.country = country;
     }
 
-    public String getAddressLine1() {
-        return addressLine1;
+    public String getAddressline() {
+        return addressline;
     }
 
-    public void setAddressLine1(String addressLine1) {
-        this.addressLine1 = addressLine1;
-    }
-
-    public String getAddressLine2() {
-        return addressLine2;
-    }
-
-    public void setAddressLine2(String addressLine2) {
-        this.addressLine2 = addressLine2;
+    public void setAddressline(String addressline) {
+        this.addressline = addressline;
     }
 
     public String getZipCode() {
@@ -113,21 +69,11 @@ public class RegisterRequest {
         this.zipCode = zipCode;
     }
 
-    public String getCity() {
-        return city;
+    public String getState() {
+        return state;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getProvince() {
-        return province;
-    }
-
-    public void setProvince(String province) {
-        this.province = province;
-    }
+    public void setState(String state) { this.state = state; }
 
     public String getPhoneNumber() {
         return phoneNumber;

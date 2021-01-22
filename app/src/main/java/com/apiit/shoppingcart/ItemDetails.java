@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.apiit.model.Product;
 import com.apiit.shoppingcart.database.OrderContract;
+import com.apiit.utilities.Utilities;
 import com.squareup.picasso.Picasso;
 
 public class ItemDetails extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -91,9 +92,11 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
 
                 productToCart.setId(id);
                 productToCart.setSize(selectedSize());
-                productToCart.setTitle(itemName.getText().toString());
+                productToCart.setName(itemName.getText().toString());
                 productToCart.setQty(Integer.parseInt(quantitynumber.getText().toString()));
                 productToCart.setPrice(itemPrice.getText().toString());
+
+
 
                 Intent intent = new Intent(ItemDetails.this, SummaryActivity.class);
                 startActivity(intent);
@@ -112,6 +115,10 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
                 double Price1 = basePrice * quantity;
                 String setNewPrice = String.valueOf(Price1);
                 itemPrice.setText(setNewPrice);
+
+                Double cartTotal = Utilities.getFinalCartValue()+Price1;
+                Utilities.setFinalCartValue(cartTotal);
+
             }
         });
 
@@ -128,6 +135,8 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
                     double Price2 = basePrice * quantity;
                     String setNewPrice = String.valueOf(Price2);
                     itemPrice.setText(setNewPrice);
+                    Double cartTotal = Utilities.getFinalCartValue()+Price2;
+                    Utilities.setFinalCartValue(cartTotal);
                 }
             }
         });
@@ -141,7 +150,7 @@ public class ItemDetails extends AppCompatActivity implements LoaderManager.Load
         int id  = 0;
         ContentValues values = new ContentValues();
 //      values.put(OrderContract.OrderEntry._ID,productToCart.getId());
-        values.put(OrderContract.OrderEntry.COLUMN_NAME, productToCart.getTitle());
+        values.put(OrderContract.OrderEntry.COLUMN_NAME, productToCart.getName());
         values.put(OrderContract.OrderEntry.COLUMN_PRICE, productToCart.getPrice());
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, productToCart.getQty());
         values.put(OrderContract.OrderEntry.COLUMN_SIZE, productToCart.getSize());

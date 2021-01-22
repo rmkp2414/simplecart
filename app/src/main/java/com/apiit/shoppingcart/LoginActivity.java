@@ -17,9 +17,12 @@ import com.apiit.api.LoginResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
 import com.apiit.model.Product;
+import com.apiit.utilities.Utilities;
 
 import java.util.List;
 
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -54,6 +57,8 @@ public class LoginActivity extends AppCompatActivity {
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
 
+
+
                 if(TextUtils.isEmpty(email)){
                     mEmail.setError("Email is Required");
                     return;
@@ -72,21 +77,8 @@ public class LoginActivity extends AppCompatActivity {
                 loginRequest.setPassword(mPassword.getText().toString());
                 retrofitService   = RetrofitClient.getClient().create(RetrofitInterface.class);
 
-//                Call<String> callx = retrofitService.sayHello();
-//
-//
-//
-//                callx.enqueue(new Callback<String>() {
-//                    @Override
-//                    public void onResponse(Call<String> call, Response<String> response) {
-//                        Toast.makeText(getApplicationContext(),"Hi  "+response.body(),Toast.LENGTH_LONG).show();
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<String> call, Throwable t) {
-//                        Toast.makeText(getApplicationContext(),"Error in User Name or Passwrod",Toast.LENGTH_LONG).show();
-//                    }
-//                });
+
+
 
                 Call<LoginResponse> call = retrofitService.login(loginRequest);
                 call.enqueue(new Callback<LoginResponse>() {
@@ -94,14 +86,34 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                         if(response.isSuccessful())
                         {
-                            String user = response.body().getJwtToken();
+                            String jwt = response.body().getJwtToken();
+                            if(jwt != null)
+                            {
+                                Utilities.setJwtToken(jwt);
+                                progressBar.setVisibility(View.INVISIBLE);
+                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                return;
+                            }
+                            else
+                            {
+                                Toast.makeText(getApplicationContext(),"Something Went Wrong",Toast.LENGTH_LONG).show();
+                                return;
+
+                            }
 
 
                             //rightaway get user details
 
+                            //
+
+                            //users carts
+
+
+                            //users orders
+
                         }
                         else{
-                            Toast.makeText(getApplicationContext(),"Error in User Name or Passwrod",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"Incorrect Username or Password",Toast.LENGTH_LONG).show();
                         }
                     }
 

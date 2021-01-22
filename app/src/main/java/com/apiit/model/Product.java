@@ -8,24 +8,32 @@ public class Product {
 
     @SerializedName("id")
     private int id;
-    @SerializedName("title")
-    private String title;
+    @SerializedName("name")
+    private String name;
     @SerializedName("price")
     private String price;
     @SerializedName("description")
     private String description;
     @SerializedName("category")
     private String category;
-    @SerializedName("image")
-    private String image;
+    @SerializedName("images")
+    private String[] images;
 
-    public String getImage() {
-        return image;
+    public String[] getImages() {
+        return images;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImages(String[] images) {
+        this.images = images;
     }
+
+    //    public String[] getImage() {
+//        return images;
+//    }
+//
+//    public void setImage(String image) {
+//        this.image = image;
+//    }
 
 //    @SerializedName("success")
 //    private boolean success;
@@ -80,8 +88,8 @@ public class Product {
         return size;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
     public void setDescription(String description) {
@@ -92,8 +100,8 @@ public class Product {
         return description;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getRating() {

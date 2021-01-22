@@ -684,6 +684,10 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\16fcc0ace06257c0aa39570cf9e9fe4d\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
+        "merged": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_shipping.xml.flat",
+        "source": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\src\\main\\res\\layout\\activity_shipping.xml"
+    },
+    {
         "merged": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_profile.xml.flat",
         "source": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\src\\main\\res\\drawable\\ic_profile.xml"
     },
@@ -1312,10 +1316,6 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\16fcc0ace06257c0aa39570cf9e9fe4d\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_cart.xml.flat",
-        "source": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\src\\main\\res\\layout\\fragment_my_cart.xml"
-    },
-    {
         "merged": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mtrl_chip_checked_circle.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\fa0ea58ce5947cb821484741702ebd48\\res\\drawable\\ic_mtrl_chip_checked_circle.xml"
     },
@@ -1710,6 +1710,10 @@
     {
         "merged": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_empty_icon.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-2\\files-2.1\\fa0ea58ce5947cb821484741702ebd48\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
+        "merged": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_my_profile.xml.flat",
+        "source": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\src\\main\\res\\layout\\fragment_my_profile.xml"
     },
     {
         "merged": "E:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\build\\intermediates\\res\\merged\\debug\\layout-v26_abc_screen_toolbar.xml.flat",

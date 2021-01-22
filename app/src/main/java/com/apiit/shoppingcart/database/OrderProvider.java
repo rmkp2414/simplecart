@@ -86,6 +86,11 @@ public class OrderProvider extends ContentProvider {
             throw new IllegalArgumentException("price is Required");
         }
 
+        String size = values.getAsString(OrderContract.OrderEntry.COLUMN_SIZE);
+        if(size == null) {
+            throw new IllegalArgumentException("Size is Required");
+        }
+
         // SINCE WE ARE INSERTING DATA IN DATABASE SO NOW WE ARE WRITING ON DATABASE
 
         SQLiteDatabase database = mHelper.getWritableDatabase();

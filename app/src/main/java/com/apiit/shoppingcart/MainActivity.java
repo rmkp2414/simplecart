@@ -22,6 +22,7 @@ import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
 import com.apiit.model.Product;
 import com.apiit.shoppingcart.database.OrderHelper;
+import com.apiit.utilities.Utilities;
 import com.google.gson.Gson;
 import com.google.gson.internal.$Gson$Types;
 import com.google.gson.reflect.TypeToken;
@@ -90,6 +91,9 @@ implements NavigationView.OnNavigationItemSelectedListener {
 
         Intent intent=getIntent();
         String category = intent.getStringExtra("categoryName");
+
+
+
         if(category != null)
         {
             Call<Product> call = retrofitService.getProductsByCategory(category);
@@ -107,8 +111,11 @@ implements NavigationView.OnNavigationItemSelectedListener {
                 }
             });
         }
+
         else {
-            Call<List<Product>> call = retrofitService.getProducts();
+            Call<List<Product>> call = retrofitService.getAllProducts("Bearer "+Utilities.getJwtToken());
+//            Call<String> call = retrofitService.getAllProducts(Utilities.getJwtToken().toString());
+
             call.enqueue(new Callback<List<Product>>() {
                 @Override
                 public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
@@ -116,8 +123,14 @@ implements NavigationView.OnNavigationItemSelectedListener {
 //                    List<Product> allClothes = response.body().getAllItems();
 //                    Log.e("all",response.body().toString());
 //                    List<Product> allClothes = toList(response.body().toString());
-                    List<Product> allClothes = response.body();
-                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
+                    if(response.isSuccessful()) {
+                        List<Product> allClothes = response.body();
+                        recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"Something Went Wrong",Toast.LENGTH_LONG).show();
+                        return;
+                    }
 
                 }
 
@@ -126,6 +139,26 @@ implements NavigationView.OnNavigationItemSelectedListener {
                     Toast.makeText(getApplicationContext(), "Unable to fetch json: " + t.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
+//        else {
+//            Call<List<Product>> call = retrofitService.getProducts();
+//
+//            call.enqueue(new Callback<List<Product>>() {
+//                @Override
+//                public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+//
+////                    List<Product> allClothes = response.body().getAllItems();
+////                    Log.e("all",response.body().toString());
+////                    List<Product> allClothes = toList(response.body().toString());
+//                    List<Product> allClothes = response.body();
+//                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
+//
+//                }
+//
+//                @Override
+//                public void onFailure(Call<List<Product>> call, Throwable t) {
+//                    Toast.makeText(getApplicationContext(), "Unable to fetch json: " + t.getMessage(), Toast.LENGTH_LONG).show();
+//                }
+//            });
 //            call.enqueue(new Callback<Product>() {
 //
 ////                @Override

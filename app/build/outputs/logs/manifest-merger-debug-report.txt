@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\fa0ea58ce5947cb821484741702ebd48\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\16fcc0ace06257c0aa39570cf9e9fe4d\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-2\files-2.1\daba047956f00f40b5b9236b5459849a\AndroidManifest.xml:2:1-11:12
@@ -46,20 +46,20 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\user\.gradle\caches
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\434f26b9a208baca92385694304dc9f0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\user\.gradle\caches\transforms-2\files-2.1\e1efca8645e8e7030b168998b33693fe\AndroidManifest.xml:17:1-22:12
 MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-2\files-2.1\c910010c598e4ef0a7539670737d3016\AndroidManifest.xml:2:1-28:12
-INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
-INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
 	package
 		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
 		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-59:12
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:1-60:12
 		INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:2:11-69
@@ -114,7 +114,7 @@ MERGED from [com.paypal.sdk:paypal-android-sdk:2.14.2] C:\Users\user\.gradle\cac
 	android:name
 		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:18:22-76
 application
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:21:5-57:19
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:21:5-58:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\fa0ea58ce5947cb821484741702ebd48\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\user\.gradle\caches\transforms-2\files-2.1\fa0ea58ce5947cb821484741702ebd48\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-2\files-2.1\daba047956f00f40b5b9236b5459849a\AndroidManifest.xml:9:5-20
@@ -147,80 +147,84 @@ MERGED from [io.card:android-sdk:5.3.4] C:\Users\user\.gradle\caches\transforms-
 		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:22:9-35
 	android:theme
 		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:27:9-52
+activity#com.apiit.shoppingcart.Shipping
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:28:9-55
+	android:name
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:28:19-43
 activity#com.apiit.shoppingcart.PaypalConfirmationActivity
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:28:9-73
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:29:9-64
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:28:19-61
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:29:19-61
 activity#com.apiit.shoppingcart.PayPalPaymentActivity
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:29:9-59
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:30:9-59
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:29:19-56
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:30:19-56
 activity#com.apiit.shoppingcart.SummaryActivity
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:30:9-53
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:31:9-53
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:30:19-50
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:31:19-50
 activity#com.apiit.shoppingcart.ItemDetails
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:31:9-49
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:32:9-49
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:31:19-46
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:32:19-46
 activity#com.apiit.shoppingcart.MainActivity
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:32:9-50
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:33:9-50
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:32:19-47
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:33:19-47
 activity#com.apiit.shoppingcart.Product_Details
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:33:9-53
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:34:9-53
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:33:19-50
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:34:19-50
 activity#com.apiit.shoppingcart.CartActivity
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:34:9-50
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:35:9-50
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:34:19-47
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:35:19-47
 activity#com.apiit.shoppingcart.Register
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:35:9-46
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:36:9-46
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:35:19-43
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:36:19-43
 activity#com.apiit.shoppingcart.CategoryActivity
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:36:9-54
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:37:9-54
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:36:19-51
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:37:19-51
 activity#com.apiit.shoppingcart.Order
 ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:38:9-43
 	android:name
 		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:38:19-40
 activity#com.apiit.shoppingcart.LoginActivity
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:39:9-44:20
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:39:9-45:20
 	android:name
 		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:39:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:40:13-43:29
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:40:13-44:29
 action#android.intent.action.MAIN
 ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:41:17-69
 	android:name
 		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:42:17-77
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:43:17-77
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:42:27-74
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:43:27-74
 provider#com.apiit.shoppingcart.database.OrderProvider
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:46:9-49:39
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:47:9-50:39
 	android:authorities
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:48:13-57
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:49:13-57
 	android:exported
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:49:13-36
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:50:13-36
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:47:13-51
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:48:13-51
 meta-data#preloaded_fonts
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:51:9-53:57
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:52:9-54:57
 	android:resource
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:53:13-54
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:54:13-54
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:52:13-43
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:53:13-43
 meta-data#com.google.android.geo.API_KEY
-ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:54:9-56:71
+ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:55:9-57:71
 	android:value
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:56:13-68
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:57:13-68
 	android:name
-		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:55:13-58
+		ADDED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml:56:13-58
 uses-sdk
 INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Android_Other\Cart\cart\manuja.shopping.app\app\src\main\AndroidManifest.xml

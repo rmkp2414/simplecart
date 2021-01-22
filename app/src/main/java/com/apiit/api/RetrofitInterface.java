@@ -5,10 +5,10 @@ import com.apiit.model.User;
 import java.util.List;
 import retrofit2.Call;
 
-import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -45,21 +45,11 @@ public interface RetrofitInterface {
 //    @POST("/api/login")
 //    Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
 
-    @POST("/api/register")
-    Call<RegisterResponse> register(
-            @Query("userfullName") String userfullName,
-            @Query("useruserName") String useruserName,
-            @Query("usereMail") String usereMail,
-            @Query("userphoneNumber") String userphoneNumber,
-            @Query("userpassword") String userpassword,
-            @Query("useraddressLine1") String useraddressLine1,
-            @Query("userstate") String userstate,
-            @Query("userzi") String userzip);
-
     @FormUrlEncoded
     @POST("/login")
     Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);
 
+    @FormUrlEncoded
     @POST("users/")
     Call<RegisterResponse> registerUsers(@Body RegisterRequest registerRequest);
 
@@ -72,7 +62,25 @@ public interface RetrofitInterface {
     @POST("/api/authenticate")
     Call<LoginResponse> login(@Body LoginRequest login);
 
+    @Headers({"Content-Type: application/json"})
+    @POST("/api/user")
+    Call<User> getUser(@Header("Authorization") String authToken);
+
+    @Headers({"Content-Type: application/json"})
+    @POST("/api/register")
+    Call<RegisterResponse> register(@Body RegisterRequest register);
+
+    @Headers({"Content-Type: application/json"})
     @GET("/api/hello")
     Call<String> sayHello();
+
+    @Headers({"Content-Type: application/json"})
+    @GET("/api/products")
+    Call<List<Product>> getAllProducts(@Header("Authorization") String authToken);
+//    Call<String> getAllProducts(@Header("Authorization") String authToken);
+
+    @Headers({"Content-Type: application/json"})
+    @POST("/api/saveshipping")
+    Call<GeneralResponse> saveShipping(@Header("Authorization") String authToken,@Body ShippingOrder order);
 
 }

@@ -9,6 +9,7 @@ import android.widget.CursorAdapter;
 import android.widget.TextView;
 
 import com.apiit.shoppingcart.database.OrderContract;
+import com.apiit.utilities.Utilities;
 
 public class CartAdapter extends CursorAdapter {
 
@@ -48,5 +49,7 @@ public class CartAdapter extends CursorAdapter {
         itemPrice.setText(priceOfItem);
         itemQty.setText(qtyOfItem);
         itemSize.setText(sizeOfItem);
+
+
     }
 }

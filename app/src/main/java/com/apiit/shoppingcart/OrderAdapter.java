@@ -30,23 +30,22 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     @Override
     public ViewHolder onCreateViewHolder( ViewGroup parent, int i) {
         View view = LayoutInflater.from(context).inflate(R.layout.listitem, parent, false);
-        selectingItem = new Product();
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder( ViewHolder holder, int position) {
         // here we will find the position and start setting the output on our views
-       receivingItemName         = modelList.get(position).getTitle();
+       receivingItemName         = modelList.get(position).getName();
        receivingItemDescription  = modelList.get(position).getDescription();
        receivingItemPrice        = modelList.get(position).getPrice();
        receivingItemCategory       = modelList.get(position).getCategory();
-       receivingItemImage        = modelList.get(position).getImage();
+       receivingItemImage        = modelList.get(position).getImages()[0];
 
         holder.itemName.setText(receivingItemName);
         holder.itemDescription.setText(receivingItemDescription);
-        holder.itemCategory.setText(String.valueOf(receivingItemCategory));
-        holder.itemPrice.setText(String.valueOf(receivingItemPrice));
+        holder.itemCategory.setText(receivingItemCategory);
+        holder.itemPrice.setText(receivingItemPrice);
         Picasso.with(context).load(receivingItemImage).into(holder.imageView);
     }
 
@@ -79,8 +78,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             Intent intent = new Intent(context, ItemDetails.class);
 
             intent.putExtra("id",position);
-            intent.putExtra("itemName",modelList.get(position).getTitle());
-            intent.putExtra("imgUri",modelList.get(position).getImage());
+            intent.putExtra("itemName",modelList.get(position).getName());
+            intent.putExtra("imgUri",modelList.get(position).getImages()[0]);
             intent.putExtra("itemPrice",modelList.get(position).getPrice());
             intent.putExtra("itemDesc",modelList.get(position).getDescription());
             intent.putExtra("itemCat",modelList.get(position).getCategory() );

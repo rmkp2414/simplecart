@@ -31,9 +31,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/include">
 
         <TextView
+            android:id="@+id/totalCartPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/color1"
+            android:background="@color/colorPrimary"
             android:text="TOTAL CART VALUE 25$"
             android:textSize="30sp" />
 
