@@ -1,8 +1,8 @@
 package com.apiit.shoppingcart;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -16,13 +16,8 @@ import com.apiit.api.LoginRequest;
 import com.apiit.api.LoginResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
-import com.apiit.model.Product;
 import com.apiit.utilities.Utilities;
 
-import java.util.List;
-
-import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

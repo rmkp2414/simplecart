@@ -1,8 +1,7 @@
 package com.apiit.shoppingcart;
 
-import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.apiit.api.GeneralResponse;
-import com.apiit.api.RegisterResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
 import com.apiit.api.ShippingOrder;
@@ -23,7 +21,7 @@ import retrofit2.Callback;
 
 public class Shipping extends AppCompatActivity {
 
-    EditText fullName,eMail,phoneNumber,addressLine,country,state,zip,cc,csv,ccexpire;
+    TextView fullName,eMail,phoneNumber,addressLine,country,state,zip,cc,csv,ccexpire;
     TextView cartTotal,tax,shippingCost,subTotal;
     Button saveBtn;
 
@@ -46,9 +44,12 @@ public class Shipping extends AppCompatActivity {
         shippingCost = findViewById(R.id.shippingcost);
         tax = findViewById(R.id.tax);
         subTotal = findViewById(R.id.total);
+        saveBtn = findViewById(R.id.save);
 
 
         ShippingOrder shippingOrder = new ShippingOrder();
+
+
 
         shippingCost.setText("1254");
         tax.setText("541");
@@ -100,7 +101,7 @@ public class Shipping extends AppCompatActivity {
                 retrofitService.saveShipping("Bearer "+Utilities.getJwtToken(),shippingOrder).enqueue(new Callback<GeneralResponse>() {
                     @Override
                     public void onResponse(Call<GeneralResponse> call, retrofit2.Response<GeneralResponse> response) {
-
+                     //   shippingOrder.setUserCart(Utilities.getFinalCart());
                         GeneralResponse res = response.body();
                         if(res.getMessage().equals("success")){
                             Toast toast = Toast.makeText(getApplicationContext(),"Shiping Order Success",Toast.LENGTH_SHORT);

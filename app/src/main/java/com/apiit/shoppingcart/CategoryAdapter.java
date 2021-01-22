@@ -1,24 +1,17 @@
 package com.apiit.shoppingcart;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.apiit.api.RetrofitClient;
-import com.apiit.api.RetrofitInterface;
-import com.apiit.model.Product;
-
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-
-import static android.support.v4.content.ContextCompat.startActivity;
+import static androidx.core.content.ContextCompat.startActivity;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
 

@@ -2,18 +2,18 @@ package com.apiit.shoppingcart;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.util.Log;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.core.view.GravityCompat;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+
 import android.view.MenuItem;
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -21,16 +21,9 @@ import android.widget.Toast;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
 import com.apiit.model.Product;
-import com.apiit.shoppingcart.database.OrderHelper;
 import com.apiit.utilities.Utilities;
 import com.google.gson.Gson;
-import com.google.gson.internal.$Gson$Types;
-import com.google.gson.reflect.TypeToken;
 
-import org.json.JSONArray;
-
-import java.lang.reflect.Type;
-import java.util.Collection;
 import java.util.List;
 
 import retrofit2.Call;
@@ -41,12 +34,11 @@ public class MainActivity extends AppCompatActivity
 implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final int HOME_FRAGMENT = 0;
-    private static final int CART_FRAGMENT = 1;
+    private static final int PROFILE_FRAGMENT = 1;
 
 
     private FrameLayout frameLayout;
     private static int currentFragment;
-    FragmentTransaction fragmentTransactionx = getSupportFragmentManager().beginTransaction();
     private NavigationView navigationView;
     RecyclerView recyclerViewVertical;
     public Toolbar toolbar;
@@ -254,6 +246,7 @@ implements NavigationView.OnNavigationItemSelectedListener {
         } else if (id == R.id.nav_my_cart) {
             startActivity(new Intent(getApplicationContext(),SummaryActivity.class));
         } else if (id == R.id.nav_my_account) {
+            setFragment(new MyProfileFragment(),PROFILE_FRAGMENT);
         }else if (id == R.id.nav_share) {
         } else if (id == R.id.nav_send) {
         }
