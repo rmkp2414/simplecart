@@ -1,270 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Shipping">
 
-        <TextView
+    <include
+        android:id="@+id/include"
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <TextView
         android:id="@+id/label"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Ship To"
         android:textColor="@color/colorAccent"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        android:textSize="30sp" />
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="Full Name"
         android:maxLines="1"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/address"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/label"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+ />
 
     <EditText
         android:id="@+id/address"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="Address"
-        android:maxLines="1"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/state"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:maxLines="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/country"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextbackground"
+            android:fontFamily="@font/catamaran"
+            android:hint="Country"
+            android:maxLines="1" />
 
     <EditText
         android:id="@+id/state"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="State"
-        android:maxLines="1"
-
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/zip"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:maxLines="1" />
 
     <EditText
         android:id="@+id/zip"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="ZIP"
+        android:inputType="number"
         android:maxLines="1"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="Email"
-        android:maxLines="1"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
+        android:maxLines="1" />
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="Phone Number"
-        android:maxLines="1"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/ccnumber"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
+        android:inputType="number"
+        android:maxLines="1"/>
     <EditText
         android:id="@+id/ccnumber"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="CC Number"
+        android:inputType="number"
         android:maxLength="12"
-        android:maxLines="1"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/csv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
+        android:maxLines="1"/>
     <EditText
         android:id="@+id/csv"
         android:layout_width="match_parent"
-
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="CSV"
-        android:inputType="textPassword"
-        android:maxLength="3"
-        android:maxLines="1"
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/expirationdate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:inputType="number"
+        android:maxLength="3" />
 
     <EditText
         android:id="@+id/expirationdate"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:fontFamily="@font/catamaran"
         android:hint="Expire Date (mm/yy)"
         android:maxLength="5"
         android:maxLines="1"
 
-        android:padding="10dp"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintBottom_toTopOf="@id/totalCartPrice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+
+ />
 
     <TextView
         android:id="@+id/totalCartPrice"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:enabled="false"
-        android:textColor="@color/color1"
-
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/shippingcost"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textAlignment="textEnd" />
 
     <TextView
         android:id="@+id/shippingcost"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:enabled="false"
+        android:textAlignment="textEnd"
         android:textColor="@color/color1"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/tax"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+ />
 
     <TextView
         android:id="@+id/tax"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:enabled="false"
+        android:textAlignment="textEnd"
         android:textColor="@color/color1"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/total"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+  />
 
     <TextView
         android:id="@+id/total"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/edittextbackground"
         android:enabled="false"
+        android:textAlignment="textEnd"
         android:textColor="@color/color1"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+ />
 
     <Button
         android:id="@+id/save"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/catamaran"
         android:maxLines="1"
         android:text="SHIP"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.998" />
+ />
 
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

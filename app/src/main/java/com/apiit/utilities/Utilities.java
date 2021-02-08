@@ -1,6 +1,7 @@
 package com.apiit.utilities;
 
 import com.apiit.model.Cart;
+import com.apiit.model.LoginResponse;
 import com.apiit.model.Product;
 import com.apiit.model.User;
 

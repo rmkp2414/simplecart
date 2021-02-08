@@ -25,7 +25,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".Shipping"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".Shipping" />
         <activity android:name=".PaypalConfirmationActivity" />
         <activity android:name=".PayPalPaymentActivity" />
         <activity android:name=".SummaryActivity" />

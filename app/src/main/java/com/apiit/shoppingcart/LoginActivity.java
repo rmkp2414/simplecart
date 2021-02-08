@@ -16,7 +16,11 @@ import com.apiit.api.LoginRequest;
 import com.apiit.api.LoginResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
+import com.apiit.model.Product;
+import com.apiit.model.User;
 import com.apiit.utilities.Utilities;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -85,6 +89,21 @@ public class LoginActivity extends AppCompatActivity {
                             if(jwt != null)
                             {
                                 Utilities.setJwtToken(jwt);
+                                Call<User> user = retrofitService.getUser("Bearer "+Utilities.getJwtToken());
+                                user.enqueue(new Callback<User>() {
+                                    @Override
+                                    public void onResponse(Call<User> call, Response<User> response) {
+
+                                        User user = response.body();
+                                        Utilities.setCurrentUser(user);
+                                        Toast.makeText(getApplicationContext(), "User Retrieved" + user.getUsername(), Toast.LENGTH_LONG).show();
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<User> call, Throwable t) {
+                                        Toast.makeText(getApplicationContext(), "Error Getting User Details", Toast.LENGTH_LONG).show();
+                                    }
+                                });
                                 progressBar.setVisibility(View.INVISIBLE);
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 return;
@@ -93,19 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                             {
                                 Toast.makeText(getApplicationContext(),"Something Went Wrong",Toast.LENGTH_LONG).show();
                                 return;
-
                             }
-
-
-                            //rightaway get user details
-
-                            //
-
-                            //users carts
-
-
-                            //users orders
-
                         }
                         else{
                             Toast.makeText(getApplicationContext(),"Incorrect Username or Password",Toast.LENGTH_LONG).show();

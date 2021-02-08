@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginRequest {
 
-//    private static final long serialVersionUID = -3088960829111744732L;
+    private static final long serialVersionUID = -3088960829111744732L;
 
     @SerializedName("username")
     @Expose

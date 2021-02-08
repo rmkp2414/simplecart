@@ -33,7 +33,7 @@ public class Shipping extends AppCompatActivity {
         fullName = findViewById(R.id.name);
         eMail = findViewById(R.id.email);
         phoneNumber = findViewById(R.id.phone);
-        addressLine = findViewById(R.id.addressline_1);
+        addressLine = findViewById(R.id.address);
         country = findViewById(R.id.country);
         state = findViewById(R.id.state);
         zip = findViewById(R.id.zip);
@@ -46,6 +46,18 @@ public class Shipping extends AppCompatActivity {
         subTotal = findViewById(R.id.total);
         saveBtn = findViewById(R.id.save);
 
+        fullName.setText(Utilities.getCurrentUser().getFirstname()+" "+Utilities.getCurrentUser().getLastname());
+        eMail.setText(Utilities.getCurrentUser().getEmail());
+        phoneNumber.setText(Utilities.getCurrentUser().getPhone());
+        addressLine.setText(Utilities.getCurrentUser().getAddress1()+" "+Utilities.getCurrentUser().getAddress2());
+        country.setText(Utilities.getCurrentUser().getCountry());
+        state.setText(Utilities.getCurrentUser().getState());
+        zip.setText(Utilities.getCurrentUser().getZip());
+//        cartTotal =
+//        shippingCost = //cartTotal + 10%;
+//        tax= //carttotal + 15%
+//        subTotal //
+//
 
         ShippingOrder shippingOrder = new ShippingOrder();
 
@@ -64,33 +76,33 @@ public class Shipping extends AppCompatActivity {
         subTotal.setText(String.valueOf(total));
 
         RetrofitInterface retrofitService;
-
+//
         retrofitService   = RetrofitClient.getClient().create(RetrofitInterface.class);
-
-
-        retrofitService.getUser("Bearer "+Utilities.getJwtToken()).enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, retrofit2.Response<User> response) {
-
-                User user = response.body();
-                fullName.setText(user.getName());
-                eMail.setText(user.getEmail());
-                addressLine.setText(user.getAddress());
-                zip.setText(user.getZip());
-                state.setText(user.getState());
-                phoneNumber.setText(user.getPhone());
-//                Toast toast = Toast.makeText(getApplicationContext(),"Register Success",Toast.LENGTH_SHORT);
-//                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-//                return;
-            }
-            @Override
-            public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
-
-//                t.printStackTrace();
-//                Toast toast = Toast.makeText(getApplicationContext(),"Error Occurred",Toast.LENGTH_SHORT);
-//                toast.show();
-            }
-        });
+//
+//
+//        retrofitService.getUser("Bearer "+Utilities.getJwtToken()).enqueue(new Callback<User>() {
+//            @Override
+//            public void onResponse(Call<User> call, retrofit2.Response<User> response) {
+//
+//                User user = response.body();
+//                fullName.setText(user.getName());
+//                eMail.setText(user.getEmail());
+//                addressLine.setText(user.getAddress());
+//                zip.setText(user.getZip());
+//                state.setText(user.getState());
+//                phoneNumber.setText(user.getPhone());
+////                Toast toast = Toast.makeText(getApplicationContext(),"Register Success",Toast.LENGTH_SHORT);
+////                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+////                return;
+//            }
+//            @Override
+//            public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
+//
+////                t.printStackTrace();
+////                Toast toast = Toast.makeText(getApplicationContext(),"Error Occurred",Toast.LENGTH_SHORT);
+////                toast.show();
+//            }
+//        });
 
 
         saveBtn.setOnClickListener(new View.OnClickListener(){

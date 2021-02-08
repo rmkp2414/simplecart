@@ -33,8 +33,6 @@ public class ShippingOrder {
             this.username = username;
         }
 
-
-
         public String getFullname() {
             return fullname;
         }

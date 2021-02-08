@@ -1,8 +1,6 @@
 package com.apiit.model;
 
 public class LoginResponse {
-
-
     String message;
     String userName;
     String email;

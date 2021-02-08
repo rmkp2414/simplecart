@@ -6,15 +6,48 @@ import java.io.Serializable;
 
 public class LoginResponse implements Serializable {
 
+    @SerializedName("id")
+    private String userId;
+    @SerializedName("email")
+    private String email;
+    @SerializedName("username")
+    private String username;
+    @SerializedName("jwt")
+    private  String jwtToken;
 
+   // private String imageURL;
+
+    @SerializedName("userType")
+    private String userType;
+    @SerializedName("firstName")
+    private String firstName;
+    @SerializedName(";")
+    private String lastName;
+    @SerializedName("country")
+    private String country;
+    @SerializedName("addressLine1")
+    private String addressLine1;
+    @SerializedName("addressLine2")
+    private String addressLine2;
+    @SerializedName("zipCode")
+    private String zipCode;
+    @SerializedName("city")
+    private String city;
+    @SerializedName("province")
+    private String province;
+    @SerializedName("phoneNumber")
+    private String phoneNumber;
+
+    public String getJwtToken() {
+        return jwtToken;
+    }
+
+    public void setJwtToken(String jwtToken) {
+        this.jwtToken = jwtToken;
+    }
 
     public String getUserId() {
         return userId;
-    }
-
-
-    public void setUserId(String userId) {
-        this.userId = userId;
     }
 
     public String getEmail() {
@@ -31,23 +64,5 @@ public class LoginResponse implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    @SerializedName("id")
-    private String userId;
-    @SerializedName("email")
-    private String email;
-    @SerializedName("username")
-    private String username;
-    @SerializedName("jwt")
-    private  String jwtToken;
-    private boolean success;
-
-    public String getJwtToken() {
-        return jwtToken;
-    }
-
-    public void setJwtToken(String jwtToken) {
-        this.jwtToken = jwtToken;
     }
 }

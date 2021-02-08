@@ -1075,7 +1075,6 @@ font abril_fatface
 font catamaran
 id ALT
 id CTRL
-id ConstraintLayout
 id FUNCTION
 id META
 id SHIFT
@@ -1123,8 +1122,6 @@ id buttonPanel
 id buttonPay
 id buy_now_btn
 id cancel_action
-id cart_continue_btn
-id cart_item_recyclerview
 id category_icon
 id category_name
 id category_recyclerview
@@ -1189,6 +1186,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageView
 id imageViewInfo
 id include
 id info
@@ -1210,8 +1208,6 @@ id left
 id line1
 id line3
 id linearLayout
-id linearLayout2
-id list
 id listMode
 id list_item
 id login
@@ -1425,6 +1421,7 @@ layout activity_order
 layout activity_payment
 layout activity_paypal_confirmation
 layout activity_product__details
+layout activity_profile
 layout activity_register
 layout activity_shipping
 layout activity_summary
@@ -1447,7 +1444,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_home
-layout fragment_my_profile
 layout item
 layout listitem
 layout mtrl_layout_snackbar

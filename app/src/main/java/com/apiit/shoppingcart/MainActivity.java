@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-
 import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationView;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -17,15 +16,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.widget.FrameLayout;
 import android.widget.Toast;
-
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
 import com.apiit.model.Product;
 import com.apiit.utilities.Utilities;
 import com.google.gson.Gson;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,57 +30,34 @@ public class MainActivity extends AppCompatActivity
 implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final int HOME_FRAGMENT = 0;
-    private static final int PROFILE_FRAGMENT = 1;
-
-
     private FrameLayout frameLayout;
     private static int currentFragment;
     private NavigationView navigationView;
     RecyclerView recyclerViewVertical;
     public Toolbar toolbar;
 
-
-    private List<Product> toList(String json)
-    {
-        Gson gson = new Gson();
-        Product productList = gson.fromJson(json, Product.class);
-        List<Product> list = productList.getAllItems();
-        return list;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//       boolean deleted = getApplicationContext().deleteDatabase(OrderHelper.DATABSE_NAME);
-//
+//       boolean deleted = getApplicationContext().deleteDatabase(OrderHelper.DATABSE_NAME);//
 //       if(!deleted)
 //       {
 //           return;
 //       }
-
-
         //check request coming from category //if so load related data
-
-
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         getSupportActionBar().setTitle("Manu's Cart");
         toolbar.setTitleTextColor(0xFFFFFFFF);
-
         recyclerViewVertical = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerViewVertical.setLayoutManager(linearLayoutManager);
-
         RetrofitInterface retrofitService = RetrofitClient.getClient().create(RetrofitInterface.class);
-
         Intent intent=getIntent();
         String category = intent.getStringExtra("categoryName");
-
-
 
         if(category != null)
         {
@@ -92,29 +65,19 @@ implements NavigationView.OnNavigationItemSelectedListener {
             call.enqueue(new Callback<Product>() {
                 @Override
                 public void onResponse(Call<Product> call, retrofit2.Response<Product> response) {
-//
-//
 //                    List<Product> allClothes = response.body().getAllItems();
 //                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
                 }
-
                 @Override
                 public void onFailure(Call<Product> call, Throwable t) {
                 }
             });
         }
-
         else {
             Call<List<Product>> call = retrofitService.getAllProducts("Bearer "+Utilities.getJwtToken());
-//            Call<String> call = retrofitService.getAllProducts(Utilities.getJwtToken().toString());
-
             call.enqueue(new Callback<List<Product>>() {
                 @Override
                 public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
-
-//                    List<Product> allClothes = response.body().getAllItems();
-//                    Log.e("all",response.body().toString());
-//                    List<Product> allClothes = toList(response.body().toString());
                     if(response.isSuccessful()) {
                         List<Product> allClothes = response.body();
                         recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
@@ -123,59 +86,12 @@ implements NavigationView.OnNavigationItemSelectedListener {
                         Toast.makeText(getApplicationContext(),"Something Went Wrong",Toast.LENGTH_LONG).show();
                         return;
                     }
-
                 }
-
                 @Override
                 public void onFailure(Call<List<Product>> call, Throwable t) {
                     Toast.makeText(getApplicationContext(), "Unable to fetch json: " + t.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
-//        else {
-//            Call<List<Product>> call = retrofitService.getProducts();
-//
-//            call.enqueue(new Callback<List<Product>>() {
-//                @Override
-//                public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
-//
-////                    List<Product> allClothes = response.body().getAllItems();
-////                    Log.e("all",response.body().toString());
-////                    List<Product> allClothes = toList(response.body().toString());
-//                    List<Product> allClothes = response.body();
-//                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
-//
-//                }
-//
-//                @Override
-//                public void onFailure(Call<List<Product>> call, Throwable t) {
-//                    Toast.makeText(getApplicationContext(), "Unable to fetch json: " + t.getMessage(), Toast.LENGTH_LONG).show();
-//                }
-//            });
-//            call.enqueue(new Callback<Product>() {
-//
-////                @Override
-////                public void onResponse(Call<Product> call, Response<Product> response) {
-////                    //Toast.makeText(MainActivity.this,response.body().toString(),Toast.LENGTH_SHORT).show();
-////                }
-//
-//
-////                @Override
-//                //public void onResponse(Call<Product> call, retrofit2.Response<Product> response) {
-//                public void onResponse(Call<Product> call, Response<Product> response) {
-//
-//                    Gson gson = new Gson();
-//                    Type collectionType = new TypeToken<Collection<Product>>(){}.getType();
-//                    Collection<Product> enums = gson.fromJson(response.body().toString(), collectionType);
-//
-//                    List<Product> allClothes = response.body().getAllItems();
-//                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
-//                }
-//
-//                @Override
-//                public void onFailure(Call<Product> call, Throwable t) {
-//                    Log.e("error",t.toString());
-//                }
-//            });
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -186,8 +102,6 @@ implements NavigationView.OnNavigationItemSelectedListener {
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
-
-        ///////////////frame layout / home fragment/////////////////////
         frameLayout = findViewById(R.id.main_framelayout);
         setFragment(new HomeFragment(),HOME_FRAGMENT);
     }
@@ -217,7 +131,7 @@ implements NavigationView.OnNavigationItemSelectedListener {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        //noinspection SimplifiableIfStatement
+            //noinspection SimplifiableIfStatement
         if (id == R.id.main_search_icon) {
             //show search box
             return true;
@@ -228,13 +142,8 @@ implements NavigationView.OnNavigationItemSelectedListener {
             startActivity(new Intent(getApplicationContext(),SummaryActivity.class));
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -246,7 +155,7 @@ implements NavigationView.OnNavigationItemSelectedListener {
         } else if (id == R.id.nav_my_cart) {
             startActivity(new Intent(getApplicationContext(),SummaryActivity.class));
         } else if (id == R.id.nav_my_account) {
-            setFragment(new MyProfileFragment(),PROFILE_FRAGMENT);
+            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
         }else if (id == R.id.nav_share) {
         } else if (id == R.id.nav_send) {
         }
@@ -260,12 +169,10 @@ implements NavigationView.OnNavigationItemSelectedListener {
         return true;
     }
 
-
     private void setFragment(Fragment fragment,int fragmentNo){
         currentFragment = fragmentNo;
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(frameLayout.getId(),fragment);
         fragmentTransaction.commit();
     }
-
 }

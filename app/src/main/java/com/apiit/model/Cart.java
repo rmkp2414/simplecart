@@ -1,50 +1,36 @@
 package com.apiit.model;
 
-import java.time.LocalDateTime;
+import com.apiit.shoppingcart.CartItem;
+
 import java.util.List;
 
 public class Cart {
     private int cartId;
-    private User user;
-    private List<Product> products;
-    private LocalDateTime cartDateTime;
-
-    public Cart(int cartId, User user, List<Product> products, LocalDateTime cartDateTime) {
-        this.cartId = cartId;
-        this.user = user;
-        this.products = products;
-        this.cartDateTime = cartDateTime;
-    }
-
+    private double totalAmount;
+    private int userId;
+    private List<CartItem> cartItems;
     public int getCartId() {
         return cartId;
     }
-
     public void setCartId(int cartId) {
         this.cartId = cartId;
     }
-
-    public User getUser() {
-        return user;
+    public double getTotalAmount() {
+        return totalAmount;
     }
-
-    public void setUser(User user) {
-        this.user = user;
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
     }
-
-    public List<Product> getProducts() {
-        return products;
+    public List<CartItem> getCartItems() {
+        return cartItems;
     }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
     }
-
-    public LocalDateTime getCartDateTime() {
-        return cartDateTime;
+    public int getUserId() {
+        return userId;
     }
-
-    public void setCartDateTime(LocalDateTime cartDateTime) {
-        this.cartDateTime = cartDateTime;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }

@@ -36,6 +36,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="com.apiit.shoppingcart.ProfileActivity" />
         <activity android:name="com.apiit.shoppingcart.Shipping" />
         <activity android:name="com.apiit.shoppingcart.PaypalConfirmationActivity" />
         <activity android:name="com.apiit.shoppingcart.PayPalPaymentActivity" />
