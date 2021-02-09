@@ -53,7 +53,6 @@ public class CategoryActivity extends AppCompatActivity {
         if (id == R.id.main_search_icon) {
             return true;
         }else if (id == android.R.id.home){
-
             return true;
         }
         return super.onOptionsItemSelected(item);

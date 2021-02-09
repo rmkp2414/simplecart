@@ -33,8 +33,9 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public void onBindViewHolder(@NonNull CategoryAdapter.ViewHolder viewHolder, int position) {
 
         int icon = categoryModelList.get(position).getCategoryIconLink();
-        String name = categoryModelList.get(position).getCategoryname();
-        viewHolder.setCategory(name,position);
+//        String name = categoryModelList.get(position).getCategoryname();
+//        viewHolder.setCategory(name,position);
+        viewHolder.setCategory(position);
         viewHolder.setCategoryIcon(icon);
     }
 
@@ -46,36 +47,41 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView categoryIcon;
-        private TextView categoryName;
+        //private TextView categoryName;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             categoryIcon = itemView.findViewById(R.id.category_icon);
-            categoryName = itemView.findViewById(R.id.category_name);
+          //  categoryName = itemView.findViewById(R.id.category_name);
         }
 
         private void setCategoryIcon(int icon){
             categoryIcon.setImageResource(icon);
         }
 
-        private void setCategory(final String name, final int position){
-            categoryName.setText(name);
-
+//        private void setCategory(final String name, final int position){
+            private void setCategory(final int position){
+          //  categoryName.setText(name);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (position != 0) {
-//                        Intent categoryIntent = new Intent(itemView.getContext(), CategoryActivity.class);
-//                        categoryIntent.putExtra("categoryName", name);
-//                        itemView.getContext().startActivity(categoryIntent);
+
 
                         Intent categoryIntent = new Intent(itemView.getContext(), MainActivity.class);
-                        categoryIntent.putExtra("categoryName", name);
+                        if(position==0){
+                        categoryIntent.putExtra("category", "Home");
+                        }
+                        if(position==1){
+                            categoryIntent.putExtra("category", "Gents");
+                        }
+                        if(position==2){
+                            categoryIntent.putExtra("category", "Ladies");
+                        }
+                        if(position==3){
+                            categoryIntent.putExtra("category", "Kids");
+                        }
                         itemView.getContext().startActivity(categoryIntent);
 
-
-
-                    }
                 }
             });
         }

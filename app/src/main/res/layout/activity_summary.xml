@@ -26,23 +26,13 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_weight="2"
         android:padding="10dp"
         android:layout_height="match_parent"
         android:id="@+id/recyclerView"/>
-
-
-
-
     </LinearLayout>
-
-
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,11 +41,14 @@
 
         <TextView
             android:id="@+id/totalCartPrice"
+            android:elevation="10dp"
+            android:textAlignment="textEnd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/color1"
-            android:background="@color/colorPrimary"
-            android:text="TOTAL CART VALUE 25$"
+            android:paddingRight="20dp"
+            android:textColor="#FFF"
+            android:background="@color/color4"
+            android:text="25$"
             android:textSize="30sp" />
 
 
@@ -68,14 +61,13 @@
         android:weightSum="3"
         android:layout_weight="1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+
 
             <Button
                 android:id="@+id/checkoutBtn"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
+                android:elevation="10dp"
+                android:padding="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Checkout"
@@ -86,43 +78,8 @@
                 app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <Button
-                android:id="@+id/clearthedatabase"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CLear DB"
-                android:textColor="#000"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
 
-            <Button
-                android:id="@+id/back"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Back"
-                android:textColor="#000"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.988" />
-        </LinearLayout>
-    </LinearLayout>
 
 
     <!-- Footer aligned to bottom -->

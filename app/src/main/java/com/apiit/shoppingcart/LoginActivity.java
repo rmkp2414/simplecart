@@ -93,34 +93,34 @@ public class LoginActivity extends AppCompatActivity {
                                 user.enqueue(new Callback<User>() {
                                     @Override
                                     public void onResponse(Call<User> call, Response<User> response) {
-
                                         User user = response.body();
                                         Utilities.setCurrentUser(user);
-                                        Toast.makeText(getApplicationContext(), "User Retrieved" + user.getUsername(), Toast.LENGTH_LONG).show();
                                     }
-
                                     @Override
                                     public void onFailure(Call<User> call, Throwable t) {
+                                        progressBar.setVisibility(View.INVISIBLE);
                                         Toast.makeText(getApplicationContext(), "Error Getting User Details", Toast.LENGTH_LONG).show();
                                     }
                                 });
-                                progressBar.setVisibility(View.INVISIBLE);
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                 return;
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(),"Something Went Wrong",Toast.LENGTH_LONG).show();
+                                progressBar.setVisibility(View.INVISIBLE);
+                                Toast.makeText(getApplicationContext(),"jwt Error",Toast.LENGTH_LONG).show();
                                 return;
                             }
                         }
                         else{
+                            progressBar.setVisibility(View.INVISIBLE);
                             Toast.makeText(getApplicationContext(),"Incorrect Username or Password",Toast.LENGTH_LONG).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<LoginResponse> call, Throwable t) {
+                        progressBar.setVisibility(View.INVISIBLE);
                         Toast.makeText(getApplicationContext(),"Exception",Toast.LENGTH_LONG).show();
                     }
                 });

@@ -29,7 +29,6 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
         testing = view.findViewById(R.id.home_page_recyclerview);
         LinearLayoutManager testinglayoutManager = new LinearLayoutManager(getActivity());
         testinglayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -39,14 +38,11 @@ public class HomeFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         categoryRecyclerView.setLayoutManager(layoutManager);
-
         final List<Category_Model> categoryModelList = new ArrayList<Category_Model>();
-        categoryModelList.add(new Category_Model(R.drawable.ic_gentleman,"men"));
-        categoryModelList.add(new Category_Model(R.drawable.ic_lady,"women"));
-        categoryModelList.add(new Category_Model(R.drawable.ic_girl,"kids"));
-
-
-
+        categoryModelList.add(new Category_Model(R.drawable.ic_home_icon_silhouette,"Home"));
+        categoryModelList.add(new Category_Model(R.drawable.ic_gentleman,"Gents"));
+        categoryModelList.add(new Category_Model(R.drawable.ic_lady,"Ladies"));
+        categoryModelList.add(new Category_Model(R.drawable.ic_girl,"Kids"));
         categoryAdapter = new CategoryAdapter(categoryModelList);
         categoryRecyclerView.setAdapter(categoryAdapter);
         categoryAdapter.notifyDataSetChanged();

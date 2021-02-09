@@ -1016,7 +1016,6 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
-drawable cappcunio
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1024,12 +1023,12 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable edittextbackground
-drawable greentea
 drawable ic_account_circle_black_24dp
 drawable ic_add_circle_black_24dp
 drawable ic_delete_black_24dp
 drawable ic_gentleman
 drawable ic_girl
+drawable ic_home_icon_silhouette
 drawable ic_lady
 drawable ic_launcher_background
 drawable ic_location_on_black_24dp
@@ -1044,9 +1043,7 @@ drawable ic_profile
 drawable ic_search_black_24dp
 drawable ic_shopping_basket_black_24dp
 drawable ic_shopping_cart_black_24dp
-drawable late
 drawable match
-drawable milk
 drawable minus
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1063,12 +1060,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable orange
-drawable orangevanilla
 drawable plus
 drawable rice
-drawable tea
-drawable thaitea
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font abril_fatface
@@ -1104,7 +1097,6 @@ id add_profile_icon
 id add_to_cart_btn
 id addquantity
 id address
-id addressline_1
 id addtocart
 id alertTitle
 id all
@@ -1112,7 +1104,6 @@ id always
 id appBarLayout
 id async
 id auto
-id back
 id barrier
 id beginning
 id blocking
@@ -1123,7 +1114,6 @@ id buttonPay
 id buy_now_btn
 id cancel_action
 id category_icon
-id category_name
 id category_recyclerview
 id ccnumber
 id center
@@ -1133,7 +1123,7 @@ id chains
 id checkbox
 id checkoutBtn
 id chronometer
-id clearthedatabase
+id city
 id clip_horizontal
 id clip_vertical
 id collapseActionView
@@ -1173,6 +1163,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id firstname
 id fixed
 id forever
 id ghost_view
@@ -1204,6 +1195,7 @@ id label
 id labeled
 id largeLabel
 id largeRadioButton
+id lastname
 id left
 id line1
 id line3
@@ -1365,6 +1357,7 @@ id wrap
 id wrap_content
 id xlRadioButton
 id zip
+id zipCode
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration

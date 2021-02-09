@@ -65,9 +65,7 @@ public interface RetrofitInterface {
     @GET("/api/user")
     Call<User> getUser(@Header("Authorization") String authToken);
 
-    @Headers({"Content-Type: application/json"})
-    @POST("/api/register")
-    Call<RegisterResponse> register(@Body RegisterRequest register);
+
 
     @Headers({"Content-Type: application/json"})
     @GET("/api/hello")
@@ -75,7 +73,7 @@ public interface RetrofitInterface {
 
     @Headers({"Content-Type: application/json"})
     @GET("/api/products")
-    Call<List<Product>> getAllProducts(@Header("Authorization") String authToken);
+    Call<List<Product>> getAllProducts(@Header("Authorization") String authToken,@Query("cat") String cat);
     //Call<String> getAllProducts(@Header("Authorization") String authToken);
 
     @Headers({"Content-Type: application/json"})
@@ -89,4 +87,11 @@ public interface RetrofitInterface {
     @Headers({"Content-Type: application/json"})
     @GET("/api/usercart")
     Call<List<CartItem>> getUserCart(@Header("Authorization") String authToken);
+
+    @Headers({"Content-Type: application/json"})
+    @POST("/api/register")
+    Call<RegisterResponse> register(@Body RegisterRequest register);
+
+    @GET("/api/removecartitem")
+    Call<GeneralResponse> removeItemFromCart(@Header("Authorization") String authToken,@Query("id") int id);
 }

@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="Manu's Clothing"
                 android:fontFamily="@font/abril_fatface"
-                android:textSize="20dp"/>
+                android:textSize="15dp"/>
 
         </androidx.appcompat.widget.Toolbar>
 

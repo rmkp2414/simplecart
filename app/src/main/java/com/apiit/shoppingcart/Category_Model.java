@@ -6,7 +6,7 @@ public class Category_Model {
     private String categoryname;
 
     public Category_Model(int categoryIconLink, String categoryname) {
-        CategoryIconLink = categoryIconLink;
+        this.CategoryIconLink = categoryIconLink;
         this.categoryname = categoryname;
     }
 

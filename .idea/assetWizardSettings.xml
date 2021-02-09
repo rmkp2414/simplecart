@@ -179,8 +179,8 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ff0005" />
-                            <entry key="outputName" value="ic_gentleman" />
-                            <entry key="sourceFile" value="C:\Users\user\Downloads\mustache-and-top-hat.svg" />
+                            <entry key="outputName" value="ic_home_icon_silhouette" />
+                            <entry key="sourceFile" value="C:\Users\user\Downloads\home-icon-silhouette.svg" />
                           </map>
                         </option>
                       </PersistentState>

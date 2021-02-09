@@ -9,12 +9,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
+
+import com.apiit.model.LoginResponse;
+import com.apiit.shoppingcart.database.OrderHelper;
 import com.google.android.material.navigation.NavigationView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
@@ -36,17 +41,14 @@ implements NavigationView.OnNavigationItemSelectedListener {
     RecyclerView recyclerViewVertical;
     public Toolbar toolbar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//       boolean deleted = getApplicationContext().deleteDatabase(OrderHelper.DATABSE_NAME);//
-//       if(!deleted)
-//       {
-//           return;
-//       }
-        //check request coming from category //if so load related data
+
+
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,42 +59,40 @@ implements NavigationView.OnNavigationItemSelectedListener {
         recyclerViewVertical.setLayoutManager(linearLayoutManager);
         RetrofitInterface retrofitService = RetrofitClient.getClient().create(RetrofitInterface.class);
         Intent intent=getIntent();
-        String category = intent.getStringExtra("categoryName");
 
-        if(category != null)
+
+
+        String category = intent.getStringExtra("category");
+
+
+        if(category==null)
         {
-            Call<Product> call = retrofitService.getProductsByCategory(category);
-            call.enqueue(new Callback<Product>() {
-                @Override
-                public void onResponse(Call<Product> call, retrofit2.Response<Product> response) {
-//                    List<Product> allClothes = response.body().getAllItems();
-//                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
-                }
-                @Override
-                public void onFailure(Call<Product> call, Throwable t) {
-                }
-            });
+            category = "Home";
         }
-        else {
-            Call<List<Product>> call = retrofitService.getAllProducts("Bearer "+Utilities.getJwtToken());
+
+
+            Call<List<Product>> call = retrofitService.getAllProducts("Bearer "+Utilities.getJwtToken(),category);
             call.enqueue(new Callback<List<Product>>() {
                 @Override
                 public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
                     if(response.isSuccessful()) {
+
                         List<Product> allClothes = response.body();
                         recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
                     }
                     else{
+
                         Toast.makeText(getApplicationContext(),"Something Went Wrong",Toast.LENGTH_LONG).show();
                         return;
                     }
                 }
                 @Override
                 public void onFailure(Call<List<Product>> call, Throwable t) {
-                    Toast.makeText(getApplicationContext(), "Unable to fetch json: " + t.getMessage(), Toast.LENGTH_LONG).show();
+
+                    Toast.makeText(getApplicationContext(), "Something Went Wrong", Toast.LENGTH_LONG).show();
                 }
             });
-        }
+//        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -133,7 +133,7 @@ implements NavigationView.OnNavigationItemSelectedListener {
         int id = item.getItemId();
             //noinspection SimplifiableIfStatement
         if (id == R.id.main_search_icon) {
-            //show search box
+            Toast.makeText(getApplicationContext(), "Not Implemented", Toast.LENGTH_SHORT).show();
             return true;
         }else if (id == R.id.main_notification_icon){
             //show notifications if available
@@ -160,9 +160,8 @@ implements NavigationView.OnNavigationItemSelectedListener {
         } else if (id == R.id.nav_send) {
         }
         else if (id == R.id.nav_sign_out) {
-//            FirebaseAuth.getInstance().signOut();
-//            startActivity(new Intent(getApplicationContext(),Register.class));
-//            finish();
+            Utilities.setJwtToken("");
+            startActivity(new Intent(getApplicationContext(), LoginResponse.class));
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -11,6 +11,8 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
+
+        android:fitsSystemWindows="true"
         android:foregroundGravity="center"
         android:layout_centerInParent="true"
         android:overScrollMode="never"

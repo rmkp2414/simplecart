@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.DragEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -47,13 +48,7 @@ public class SummaryActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_summary);
         //getStatusBarHeight();
 
-        Button CLEAR_DATABASE = findViewById(R.id.clearthedatabase);
-        CLEAR_DATABASE.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int deletethedata = getContentResolver().delete(OrderContract.OrderEntry.CONTENT_URI, null, null);
-            }
-        });
+
 
         Button checkOutButton = findViewById(R.id.checkoutBtn);
         checkOutButton.setOnClickListener(new View.OnClickListener() {
@@ -74,12 +69,16 @@ public class SummaryActivity extends AppCompatActivity  {
         recyclerView.setLayoutManager(linearLayoutManager);
 
 
+
+
         //get data from mysql  for this user
 
         //  cartItems = new Li
 //            Call<String> call = retrofitService.getAllProducts(Utilities.getJwtToken().toString());
 
         List<CartItem> cartItems = new ArrayList<>();
+
+
         cartItems =    Utilities.getFinalCart().getCartItems();
         recyclerView.setAdapter(new DBCartAdapter(getApplicationContext(), cartItems));
 
@@ -161,6 +160,22 @@ public class SummaryActivity extends AppCompatActivity  {
 //                toast.show();
             }
         });
+    }
+
+    class MyDragListener implements View.OnDragListener {
+        @Override
+        public boolean onDrag(View view, DragEvent dragEvent) {
+            //remove item from db
+            int action = dragEvent.getAction();
+            switch (dragEvent.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    //call db and remove item from cart
+                    view.setVisibility(View.INVISIBLE);
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
 }
 //package com.apiit.shoppingcart;
