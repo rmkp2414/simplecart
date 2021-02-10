@@ -19,8 +19,8 @@ import android.widget.Toast;
 //import com.google.firebase.firestore.DocumentReference;
 //import com.google.firebase.firestore.FirebaseFirestore;
 
-import com.apiit.api.RegisterRequest;
-import com.apiit.api.RegisterResponse;
+import com.apiit.model.RegisterRequest;
+import com.apiit.model.RegisterResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
 
@@ -71,17 +71,17 @@ public class Register extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            String userfirstName = firstName.getText().toString().trim();
-            String userlastName = lastName.getText().toString().trim();
-            String useruserName = userName.getText().toString().trim();
-            String usereMail = eMail.getText().toString().trim();
-            String userphoneNumber = phoneNumber.getText().toString().trim();
-            String userpassword = password.getText().toString().trim();
-            String useraddressLine = addressLine.getText().toString().trim();
-            String usercountry = country.getText().toString().trim();
-            String userstate = state.getText().toString().trim();
-            String userzip = zip.getText().toString().trim();
-            String userCity = city.getText().toString().trim();
+        String userfirstName = firstName.getText().toString().trim();
+        String userlastName = lastName.getText().toString().trim();
+        String useruserName = userName.getText().toString().trim();
+        String usereMail = eMail.getText().toString().trim();
+        String userphoneNumber = phoneNumber.getText().toString().trim();
+        String userpassword = password.getText().toString().trim();
+        String useraddressLine = addressLine.getText().toString().trim();
+        String usercountry = country.getText().toString().trim();
+        String userstate = state.getText().toString().trim();
+        String userzip = zip.getText().toString().trim();
+        String userCity = city.getText().toString().trim();
 
         if(TextUtils.isEmpty(userfirstName))  { firstName.setError("Name Required");return;}
         if(TextUtils.isEmpty(userlastName))   { lastName.setError("Name Required");return;}

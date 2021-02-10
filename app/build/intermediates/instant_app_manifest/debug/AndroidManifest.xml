@@ -11,7 +11,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- For Paypal -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
@@ -36,7 +36,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme.NoActionBar" >
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true" >
         <activity android:name="com.apiit.shoppingcart.ProfileActivity" />
         <activity android:name="com.apiit.shoppingcart.Shipping" />
         <activity android:name="com.apiit.shoppingcart.PaypalConfirmationActivity" />
@@ -44,11 +45,9 @@
         <activity android:name="com.apiit.shoppingcart.SummaryActivity" />
         <activity android:name="com.apiit.shoppingcart.ItemDetails" />
         <activity android:name="com.apiit.shoppingcart.MainActivity" />
-        <activity android:name="com.apiit.shoppingcart.Product_Details" />
         <activity android:name="com.apiit.shoppingcart.CartActivity" />
         <activity android:name="com.apiit.shoppingcart.Register" />
-        <activity android:name="com.apiit.shoppingcart.CategoryActivity" /> <!-- <activity -->
-        <activity android:name="com.apiit.shoppingcart.Order" />
+        <activity android:name="com.apiit.shoppingcart.CategoryActivity" />
         <activity android:name="com.apiit.shoppingcart.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,11 +55,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <provider
-            android:name="com.apiit.shoppingcart.database.OrderProvider"
-            android:authorities="com.apiit.shoppingcart"
-            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

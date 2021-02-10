@@ -1,13 +1,18 @@
 package com.apiit.api;
 
 import com.apiit.model.Cart;
+import com.apiit.model.GeneralResponse;
+import com.apiit.model.LoginRequest;
+import com.apiit.model.LoginResponse;
 import com.apiit.model.Product;
+import com.apiit.model.RegisterRequest;
+import com.apiit.model.RegisterResponse;
+import com.apiit.model.ShippingOrder;
 import com.apiit.model.User;
-import com.apiit.shoppingcart.CartItem;
+
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Body;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
@@ -46,16 +51,7 @@ public interface RetrofitInterface {
     //@POST("/api/login")
     //Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
 
-    @FormUrlEncoded
-    @POST("/login")
-    Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);
 
-    @FormUrlEncoded
-    @POST("users/")
-    Call<RegisterResponse> registerUsers(@Body RegisterRequest registerRequest);
-
-    //@POST("/api/login")
-    //Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
 
     @Headers({"Content-Type: application/json"})
     @POST("/api/authenticate")
@@ -65,20 +61,13 @@ public interface RetrofitInterface {
     @GET("/api/user")
     Call<User> getUser(@Header("Authorization") String authToken);
 
-
-
-    @Headers({"Content-Type: application/json"})
-    @GET("/api/hello")
-    Call<String> sayHello();
-
     @Headers({"Content-Type: application/json"})
     @GET("/api/products")
     Call<List<Product>> getAllProducts(@Header("Authorization") String authToken,@Query("cat") String cat);
-    //Call<String> getAllProducts(@Header("Authorization") String authToken);
 
     @Headers({"Content-Type: application/json"})
     @POST("/api/saveshipping")
-    Call<GeneralResponse> saveShipping(@Header("Authorization") String authToken,@Body ShippingOrder order);
+    Call<GeneralResponse> saveShipping(@Header("Authorization") String authToken, @Body ShippingOrder order);
 
     @Headers({"Content-Type: application/json"})
     @GET("/api/addtocart")
@@ -86,12 +75,12 @@ public interface RetrofitInterface {
 
     @Headers({"Content-Type: application/json"})
     @GET("/api/usercart")
-    Call<List<CartItem>> getUserCart(@Header("Authorization") String authToken);
+    Call<Cart> getUserCart(@Header("Authorization") String authToken);
 
     @Headers({"Content-Type: application/json"})
     @POST("/api/register")
     Call<RegisterResponse> register(@Body RegisterRequest register);
 
     @GET("/api/removecartitem")
-    Call<GeneralResponse> removeItemFromCart(@Header("Authorization") String authToken,@Query("id") int id);
+    Call<GeneralResponse> removeItemFromCart(@Header("Authorization") String authToken,@Query("userid") int userid,@Query("itemid") int itemid);
 }

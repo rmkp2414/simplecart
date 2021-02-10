@@ -1,4 +1,4 @@
-#Tue Feb 09 10:54:18 IST 2021
+#Wed Feb 10 10:57:00 IST 2021
 base.0=E\:\\Android_Other\\Cart\\cart\\manuja.shopping.app\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.1=classes.dex
 renamed.1=classes2.dex

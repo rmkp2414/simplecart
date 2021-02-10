@@ -1,13 +1,18 @@
 package com.apiit.model;
 
-import com.apiit.shoppingcart.CartItem;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class Cart {
+
+    @SerializedName("cartId")
     private int cartId;
+    @SerializedName("totalAmount")
     private double totalAmount;
+    @SerializedName("userId")
     private int userId;
+    @SerializedName("cartItems")
     private List<CartItem> cartItems;
     public int getCartId() {
         return cartId;

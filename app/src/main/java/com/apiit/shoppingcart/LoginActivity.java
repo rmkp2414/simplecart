@@ -12,15 +12,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.apiit.api.LoginRequest;
-import com.apiit.api.LoginResponse;
+import com.apiit.model.LoginRequest;
+import com.apiit.model.LoginResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
-import com.apiit.model.Product;
 import com.apiit.model.User;
 import com.apiit.utilities.Utilities;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -75,9 +72,6 @@ public class LoginActivity extends AppCompatActivity {
                 loginRequest.setUsername(mEmail.getText().toString());
                 loginRequest.setPassword(mPassword.getText().toString());
                 retrofitService   = RetrofitClient.getClient().create(RetrofitInterface.class);
-
-
-
 
                 Call<LoginResponse> call = retrofitService.login(loginRequest);
                 call.enqueue(new Callback<LoginResponse>() {

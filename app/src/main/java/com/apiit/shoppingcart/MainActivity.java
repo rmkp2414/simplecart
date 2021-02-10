@@ -10,8 +10,6 @@ import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
-import com.apiit.model.LoginResponse;
-import com.apiit.shoppingcart.database.OrderHelper;
 import com.google.android.material.navigation.NavigationView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,16 +38,12 @@ implements NavigationView.OnNavigationItemSelectedListener {
     private NavigationView navigationView;
     RecyclerView recyclerViewVertical;
     public Toolbar toolbar;
-
+    Boolean wamp = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Manu's Cart");
@@ -59,18 +53,11 @@ implements NavigationView.OnNavigationItemSelectedListener {
         recyclerViewVertical.setLayoutManager(linearLayoutManager);
         RetrofitInterface retrofitService = RetrofitClient.getClient().create(RetrofitInterface.class);
         Intent intent=getIntent();
-
-
-
         String category = intent.getStringExtra("category");
-
-
         if(category==null)
         {
             category = "Home";
         }
-
-
             Call<List<Product>> call = retrofitService.getAllProducts("Bearer "+Utilities.getJwtToken(),category);
             call.enqueue(new Callback<List<Product>>() {
                 @Override
@@ -78,6 +65,19 @@ implements NavigationView.OnNavigationItemSelectedListener {
                     if(response.isSuccessful()) {
 
                         List<Product> allClothes = response.body();
+                        if(wamp)
+                        {
+                            String prefix = Utilities.getHostIpAddress()+"/shoppingAppImages/";
+                            for (Product prod:allClothes) {
+                            if(prod.getImages().length > 0)
+                            {
+                                String imageName = prefix+prod.getImages()[0];
+                                String[] img = {imageName};
+                                prod.setImages(img);
+                            }
+                            }
+                        }
+
                         recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
                     }
                     else{
@@ -161,7 +161,7 @@ implements NavigationView.OnNavigationItemSelectedListener {
         }
         else if (id == R.id.nav_sign_out) {
             Utilities.setJwtToken("");
-            startActivity(new Intent(getApplicationContext(), LoginResponse.class));
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

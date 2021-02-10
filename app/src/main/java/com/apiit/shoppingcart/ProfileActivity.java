@@ -42,8 +42,5 @@ public class ProfileActivity extends AppCompatActivity {
         phone.setText(u.getPhone());
         email.setText(u.getEmail());
         Picasso.with(getApplicationContext()).load("https://i.pinimg.com/originals/cf/e3/8e/cfe38e0e4eb1716fc38dc2aafa949a60.jpg").into(image);
-//        image.setBackground("");
-
-
     }
 }

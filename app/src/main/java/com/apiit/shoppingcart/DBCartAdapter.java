@@ -1,21 +1,20 @@
 package com.apiit.shoppingcart;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.apiit.api.GeneralResponse;
+import com.apiit.model.GeneralResponse;
 import com.apiit.api.RetrofitClient;
 import com.apiit.api.RetrofitInterface;
-import com.apiit.model.Product;
+import com.apiit.model.CartItem;
 import com.apiit.utilities.Utilities;
 
 import java.util.List;
@@ -29,6 +28,7 @@ public class DBCartAdapter extends RecyclerView.Adapter<DBCartAdapter.ViewHolder
     String receivingItemName,receivingItemPrice,receivingItemQty,receivingItemSize;
     ImageView removeItem;
     Context context;
+    RetrofitInterface retrofitService;
     public DBCartAdapter( Context context,List<CartItem> cartItemModelsList) {
         this.cartItemModelsList = cartItemModelsList;
         this.context = context;
@@ -54,28 +54,37 @@ public class DBCartAdapter extends RecyclerView.Adapter<DBCartAdapter.ViewHolder
         holder.itemSize.setText(receivingItemSize);
         holder.itemQty.setText(receivingItemQty);
         holder.itemPrice.setText(receivingItemPrice);
+
+//        List<CartItem> items =Utilities.getFinalCart().getCartItems();
+//        CartItem ci = items.stream().filter(cartitem -> cartitem.
+        int delete = cartItemModelsList.get(position).getId();
         holder.remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                AlertDialog.Builder msg=new AlertDialog.Builder(context)
-                        .setTitle("Delete Item")
-                        .setMessage("Are you sure delete this item ")
-                        .setIcon(R.drawable.ic_delete_black_24dp)
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                retrofitService   = RetrofitClient.getClient().create(RetrofitInterface.class);
+                        retrofitService.removeItemFromCart("Bearer "+Utilities.getJwtToken(),Utilities.getCurrentUser().getId(),delete).enqueue(new Callback<GeneralResponse>() {
                             @Override
-                            public void onClick(DialogInterface dialogInterface,int i){
-                                removeItemFromCart(position);
+                            public void onResponse(Call<GeneralResponse> call, retrofit2.Response<GeneralResponse> response) {
 
-
+                                GeneralResponse res = response.body();
+                                if(res.getStatus().equals(true))
+                                {
+                                    Toast toast = Toast.makeText(context,"Item Removed Successfully",Toast.LENGTH_SHORT);
+                                    toast.show();
+                                }
+                                else{
+                                    Toast toast = Toast.makeText(context,"Error while processing Shipping Order",Toast.LENGTH_SHORT);
+                                    toast.show();
+                                }
                             }
-                        }).setNegativeButton("No",null);
-                msg.create();
-                msg.show();
-            }
-        });
-        //Picasso.with(context).load(receivingItemImage).into(holder.imageView);
-        //do we need to show an image here
+                            @Override
+                            public void onFailure(@NonNull Call<GeneralResponse> call, @NonNull Throwable t) {
+                                Toast toast = Toast.makeText(context,"Error while processing Shipping Order",Toast.LENGTH_SHORT);
+                                toast.show();
+                            }
+                        });
+                    }
+                });
     }
 
     @Override
@@ -94,34 +103,35 @@ public class DBCartAdapter extends RecyclerView.Adapter<DBCartAdapter.ViewHolder
             itemSize = itemView.findViewById(R.id.sizeInCart);
             remove = itemView.findViewById(R.id.removeItem);
 
-            remove.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
-            });
+//            remove.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    int itemPos = getAdapterPosition();
+//                    removeItemFromCart(itemPos);
+//                }
+//            });
         }
     }
 
     private void removeItemFromCart(int position)
     {
-        RetrofitInterface retrofitService = RetrofitClient.getClient().create(RetrofitInterface.class);
-        Call<GeneralResponse> call = retrofitService.removeItemFromCart("Bearer "+ Utilities.getJwtToken(), position);
-        call.enqueue(new Callback<GeneralResponse>() {
-            @Override
-            public void onResponse(Call<GeneralResponse> call, retrofit2.Response<GeneralResponse> response) {
-
-                GeneralResponse res = response.body();
-
-//                adapterCart=new Cart_Adapter(c,ass);
-//                listcart.setAdapter((ListAdapter) adapterCart);
-//                txtOrderTotal.setText(String.valueOf(db.GetSum()));
-//                    List<Product> allClothes = response.body().getAllItems();
-//                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
-            }
-            @Override
-            public void onFailure(Call<GeneralResponse> call, Throwable t) {
-            }
-        });
+//        RetrofitInterface retrofitService = RetrofitClient.getClient().create(RetrofitInterface.class);
+//        Call<GeneralResponse> call = retrofitService.removeItemFromCart("Bearer "+ Utilities.getJwtToken(), position);
+//        call.enqueue(new Callback<GeneralResponse>() {
+//            @Override
+//            public void onResponse(Call<GeneralResponse> call, retrofit2.Response<GeneralResponse> response) {
+//
+//                GeneralResponse res = response.body();
+//
+////                adapterCart=new Cart_Adapter(c,ass);
+////                listcart.setAdapter((ListAdapter) adapterCart);
+////                txtOrderTotal.setText(String.valueOf(db.GetSum()));
+////                    List<Product> allClothes = response.body().getAllItems();
+////                    recyclerViewVertical.setAdapter(new OrderAdapter(getApplicationContext(), allClothes));
+//            }
+//            @Override
+//            public void onFailure(Call<GeneralResponse> call, Throwable t) {
+//            }
+//        });
     }
 }

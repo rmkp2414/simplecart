@@ -1061,7 +1061,6 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable plus
-drawable rice
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font abril_fatface
@@ -1094,7 +1093,6 @@ id actions
 id activity_chooser_view_content
 id add
 id add_profile_icon
-id add_to_cart_btn
 id addquantity
 id address
 id addtocart
@@ -1108,11 +1106,10 @@ id barrier
 id beginning
 id blocking
 id bottom
-id bt_picker
 id buttonPanel
 id buttonPay
-id buy_now_btn
 id cancel_action
+id cart_continue_btn
 id category_icon
 id category_recyclerview
 id ccnumber
@@ -1138,7 +1135,6 @@ id custom
 id customPanel
 id decor_content_parent
 id default_activity_button
-id desc
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1269,7 +1265,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView2
 id scrollable
 id search_badge
 id search_bar
@@ -1281,7 +1276,6 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
-id select
 id select_dialog_listview
 id selected
 id shippingcost
@@ -1325,7 +1319,6 @@ id textStart
 id textView
 id textView2
 id text_input_password_toggle
-id text_view
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -1410,10 +1403,8 @@ layout activity_category
 layout activity_item_details
 layout activity_login
 layout activity_main
-layout activity_order
 layout activity_payment
 layout activity_paypal_confirmation
-layout activity_product__details
 layout activity_profile
 layout activity_register
 layout activity_shipping
@@ -1437,7 +1428,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_home
-layout item
 layout listitem
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

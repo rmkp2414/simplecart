@@ -18,13 +18,6 @@ public class Product {
     private String category;
     @SerializedName("images")
     private String[] images;
-    public String[] getImages() {
-        return images;
-    }
-    public void setImages(String[] images) {
-        this.images = images;
-    }
-
     @SerializedName("item_count")
     private int itemCount;
     @SerializedName("allItems")
@@ -37,6 +30,14 @@ public class Product {
     private Product product;
     @SerializedName("qty")
     private int qty;
+
+    public String[] getImages() {
+        return images;
+    }
+
+    public void setImages(String[] images) {
+        this.images = images;
+    }
 
     public int getQty() {
         return qty;
@@ -94,9 +95,7 @@ public class Product {
         this.rating = rating;
     }
 
-    public String getPrice() {
-        return price;
-    }
+    public String getPrice() { return price; }
 
     public void setPrice(String price) {
         this.price = price;
@@ -121,5 +120,4 @@ public class Product {
     public void setCategory(String category) {
         this.category = category;
     }
-
 }

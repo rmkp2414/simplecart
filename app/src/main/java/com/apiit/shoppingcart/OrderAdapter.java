@@ -20,6 +20,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
     Product selectingItem;
     String receivingItemName,receivingItemDescription,receivingItemImage,receivingItemCategory,receivingItemPrice;
+    int productid;
 
 
     public OrderAdapter(Context context, List<Product> modelList) {
@@ -39,8 +40,10 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
        receivingItemName         = modelList.get(position).getName();
        receivingItemDescription  = modelList.get(position).getDescription();
        receivingItemPrice        = modelList.get(position).getPrice();
-       receivingItemCategory       = modelList.get(position).getCategory();
-       receivingItemImage        = modelList.get(position).getImages()[0];
+       receivingItemCategory     = modelList.get(position).getCategory();
+       receivingItemImage           =         modelList.get(position).getImages()[0];
+
+       productid                 = modelList.get(position).getId();
 
         holder.itemName.setText(receivingItemName);
         holder.itemDescription.setText(receivingItemDescription);
@@ -59,6 +62,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         // here we will find the views on which we will inflate our data
         TextView itemName, itemDescription,itemCategory,itemPrice;
         ImageView imageView;
+        int itemId;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -67,6 +71,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             itemPrice = itemView.findViewById(R.id.itemPrice);
             itemCategory = itemView.findViewById(R.id.itemCategory);
             imageView = itemView.findViewById(R.id.itemImage);
+
             itemView.setOnClickListener(this);
         }
 
@@ -77,7 +82,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
             Intent intent = new Intent(context, ItemDetails.class);
 
-            intent.putExtra("id",position);
+            intent.putExtra("productid",productid);
             intent.putExtra("itemName",modelList.get(position).getName());
             intent.putExtra("imgUri",modelList.get(position).getImages()[0]);
             intent.putExtra("itemPrice",modelList.get(position).getPrice());
